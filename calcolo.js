@@ -382,7 +382,8 @@
       return { nome: t.nome, cedola: t.cedola, ytm: t.ytm_lordo, scad: t.mesi, lotto: t.lotto || 1000, asta: false };
     }
     function notaTitolo(t, T) {
-      const s = `scadenza ${t.scadenza.split('-').reverse().join('/')}, cedola ${fmtPct(t.cedola)}, rendimento ${fmtPct(t.ytm_lordo)} lordo`;
+      const pz = (Math.round(t.prezzo * 100) / 100).toLocaleString('it-IT', { minimumFractionDigits: 2 });
+      const s = `scadenza ${t.scadenza.split('-').reverse().join('/')}, cedola ${fmtPct(t.cedola)}, prezzo ${pz} (paghi ${pz} € per riavere 100 € alla scadenza), rendimento ${fmtPct(t.ytm_lordo)} lordo`;
       const diff = T - t.mesi, n = testoMesi(Math.abs(diff)), ultimi = Math.abs(diff) === 1 ? "l'ultimo mese" : `gli ultimi ${n}`;
       if (diff >= 3) return s + `; scade ${n} prima della fine della durata scelta: per ${ultimi} i soldi vanno in BOT`;
       if (diff > 0) return s + `; scade ${n} prima della fine della durata scelta: per ${ultimi} i soldi restano sul conto`;

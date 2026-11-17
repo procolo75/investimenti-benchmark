@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.4.5 — 17/11/2026
+- La nota dei BTP mostra anche il prezzo («paghi 96,76 € per riavere 100 € alla scadenza»), che collega cedola e rendimento.
+- Guida: «Cedola o rendimento? Un esempio», con il BTP 15/11/2031 e i conti su 10.000 €.
+
 ## v1.4.4 — 17/11/2026
 - Guida: come si calcola l'inflazione media, con il metodo veloce (somma diviso anni) e quello esatto (media composta), con esempio e formula per Excel.
 - Precisato che l'inflazione degli scenari e del campo in alto è la media all'anno su tutta la durata dell'investimento.
