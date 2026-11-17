@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.4.3 — 17/11/2026
+- Scenari d'inflazione più semplici: «Valore finale» e «Netto meno inflazione, all'anno» per lo strumento e per quello di confronto, più la colonna «Meglio».
+
+## v1.4.2 — 17/11/2026
+- BTP e BTP legato all'inflazione tenuti fino a scadenza: niente più tabella dei tassi, ma la spiegazione che il rendimento è bloccato (per quello indicizzato conta solo l'inflazione) e quanto pesano le sole cedole reinvestite. La tabella resta se il titolo va venduto prima della scadenza.
+
+## v1.4.1 — 17/11/2026
+- Negli scenari dei tassi è scritto che i punti sono punti percentuali interi e, accanto a ogni scenario, il tasso che ne risulta (es. BOT 12 mesi 3,26% → 4,26% con +1 punto).
+
+## v1.4.0 — 17/11/2026
+- **Scenari**: cliccando su una riga si apre un pannello con «Se i tassi cambiano» (−2…+2 punti: rinnovi di BOT, vincoli e buoni, BTP venduti prima della scadenza, cedole reinvestite, prezzo degli ETF obbligazionari) e «Se l'inflazione media è…» (0–6%), con il confronto con il BTP a tasso fisso e l'inflazione di pareggio tra BTP fisso e BTP legato all'inflazione.
+
 ## v1.3.2 — 17/11/2026
 - La sezione dei tassi modificabili si chiama «Modifica i tassi che non si aggiornano da soli», spiega a cosa serve e mostra solo gli strumenti accesi in «Confronta anche».
 

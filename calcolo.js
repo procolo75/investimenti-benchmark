@@ -106,7 +106,9 @@
     const serie = [o.capitale];
 
     const F = m => (sec && sec.indicizzato) ? Math.pow(1 + o.inflazione / 100, (m - m0) / 12) : 1;
-    const pz = m => prezzo(sec.ytm, sec.cedola, sec.scad - m) * F(m);
+    // scenario tassi: subito dopo l'acquisto iniziale i rendimenti di mercato si spostano di o.shift punti
+    const sh = o.shift || 0;
+    const pz = m => prezzo(sec.ytm + (m > 0 ? sh : 0), sec.cedola, sec.scad - m) * F(m);
     const commAcq = (x, m) => {
       const c = commissione(x, o.comm);
       return sec.asta ? Math.min(c, x * tettoAstaBot(sec.scad - m)) : c;
@@ -190,8 +192,10 @@
     while (m < T) {
       const rest = T - m;
       const d = o.vincolato ? durate.find(x => x <= rest) : null;
-      if (d) segmenti.push({ da: m, a: m + d, tasso: o.vincolati[d], vincolo: d, ogni: Math.min(d, 12) });
-      else segmenti.push({ da: m, a: T, tasso: o.libero, vincolo: 0, ogni: 3 });
+      // scenario tassi: i vincoli rinnovati e il conto libero usano il tasso spostato
+      const sh = o.shift || 0;
+      if (d) segmenti.push({ da: m, a: m + d, tasso: Math.max(0, o.vincolati[d] + (m > 0 ? sh : 0)), vincolo: d, ogni: Math.min(d, 12) });
+      else segmenti.push({ da: m, a: T, tasso: Math.max(0, o.libero + sh), vincolo: 0, ogni: 3 });
       m = segmenti[segmenti.length - 1].a;
     }
     let s = 0;
@@ -220,9 +224,10 @@
   // o: { mesi, capitale, reinvesti, buono: {durata_anni, tappe: [[anni, tasso]]}, sogliaBollo }
   function simBFP(o) {
     const T = o.mesi, durata = o.buono.durata_anni * 12, tassa = TASSA_STATO;
+    let rinnovato = false; // scenario tassi: i buoni riacquistati alla scadenza hanno tassi spostati
     const fattore = e => {
       let f = 1;
-      for (const [anni, r] of o.buono.tappe) if (e >= anni * 12) f = Math.pow(1 + r / 100, anni);
+      for (const [anni, r] of o.buono.tappe) if (e >= anni * 12) f = Math.pow(1 + Math.max(0, r + (rinnovato ? (o.shift || 0) : 0)) / 100, anni);
       return f;
     };
     let cap = o.capitale, inizio = 0, cash = 0, tasse = 0, bollo = 0;
@@ -237,7 +242,7 @@
         tasse += t;
         const tot = cap * f - t;
         if (o.reinvesti) cap = tot; else { cash += tot - o.capitale; cap = o.capitale; }
-        inizio = m;
+        inizio = m; rinnovato = true;
         serie.push(cap + cash - bollo);
       } else {
         serie.push(netto(cap, fattore(e)) + cash - bollo);
@@ -270,6 +275,7 @@
       bollo += units * prezzoQ * BOLLO / 12;
       spese += (o.speseAnnue || 0) / 12;
       prezzoQ *= g;
+      if (m === 1 && o.shock) prezzoQ *= 1 + o.shock / 100;
       if (dist && m % 12 === 0) {
         const p = units * prezzoQ * dist / 100, t = p * tassa;
         tasse += t; cash += p - t;
@@ -286,7 +292,8 @@
   function confronta(dati, inp) {
     const T = inp.mesi, C = inp.capitale, oggi = inp.oggi || dati.aggiornato;
     const curva = curvaBot(dati.titoli, oggi);
-    const base = { mesi: T, capitale: C, reinvesti: inp.reinvesti, comm: inp.comm, speseAnnue: inp.speseAnnue, inflazione: inp.inflazione, curva };
+    const sh = inp.shift || 0;
+    const base = { mesi: T, capitale: C, reinvesti: inp.reinvesti, comm: inp.comm, speseAnnue: inp.speseAnnue, inflazione: inp.inflazione, curva, shift: sh };
     const out = [];
     const add = (id, nome, gruppo, garanzia, r, nota) => out.push(Object.assign({ id, nome, gruppo, garanzia, nota }, r));
 
@@ -343,7 +350,7 @@
     const ob = etf.obbligazionario;
     const rendOb = ob.rendimento ?? dati.gov_euro_7a ?? 3;
     add('etf-obb', ob.nome, 'ETF', 'Mercato (prezzo variabile)',
-      simETF(Object.assign({}, base, { rendimento: rendOb, distribuzione: rendOb, ter: ob.ter, tassa: ob.tasse })),
+      simETF(Object.assign({}, base, { rendimento: rendOb + sh, distribuzione: rendOb + sh, ter: ob.ter, tassa: ob.tasse, shock: -7 * sh })),
       `rendimento a scadenza ${fmtPct(rendOb)} lordo, TER ${fmtPct(ob.ter)}; ipotizza tassi stabili`);
     const az = etf.azionario;
     for (const [k, v] of Object.entries(az.scenari)) {

@@ -70,6 +70,22 @@ td .n{font-weight:600}
 td .note{font-size:.78rem;color:var(--muted);margin-top:2px}
 td.num{font-variant-numeric:tabular-nums}
 .pos{color:var(--good)} .neg{color:var(--bad)}
+#tab tbody tr.riga{cursor:pointer}
+#tab tbody tr.riga:hover td{background:var(--soft)}
+#tab tbody tr.riga.aperta td{background:var(--soft);border-bottom-color:transparent}
+.freccia{display:inline-block;width:14px;color:var(--muted);transition:transform .15s}
+tr.aperta .freccia{transform:rotate(90deg)}
+tr.det>td{background:var(--soft);white-space:normal;text-align:left;padding:4px 14px 18px}
+.scen{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:14px 24px}
+.scen>div{min-width:0;overflow-x:auto}
+.scen h4{margin:10px 0 4px;font-size:.95rem}
+.scen p{margin:0 0 6px;font-size:.85rem;color:var(--muted)}
+.scen table{background:var(--card);border-radius:8px;font-size:.84rem}
+.scen th,.scen td{padding:5px 6px;text-align:right;white-space:nowrap}
+.scen th{white-space:normal;vertical-align:bottom}
+.scen th:first-child,.scen td:first-child{text-align:left}
+.scen tr.oggi td{font-weight:700}
+.scen .esito{font-size:.88rem;margin:6px 0 0;color:var(--ink)}
 .barw{height:5px;background:var(--soft);border-radius:3px;margin-top:4px}
 .barw i{display:block;height:100%;background:var(--bar);border-radius:3px}
 .tag{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--soft);color:var(--muted);white-space:nowrap}
@@ -164,6 +180,7 @@ a{color:var(--accent)}
   <section class="card">
     <h2>Classifica per valore finale netto</h2>
     <p class="hint" id="legenda" style="margin-top:-6px"></p>
+    <p class="hint"><b>▸ Clicca su una riga</b> per vedere cosa succede se i tassi o l'inflazione cambiano.</p>
     <div class="tw"><table id="tab"></table></div>
   </section>
 
@@ -229,6 +246,8 @@ const clona = o => JSON.parse(JSON.stringify(o));
 let ipotesi = null; // copia modificabile delle sezioni manuali
 let stato = { capitale: 10000, durata: 5, unita: 'anni', reinvesti: true, inflazione: null, preset: 'std', comm: PRESET.std, spese: 0, mostra: { bfp: true, conti: false, etf: false } };
 let grafico = null;
+let ultimoInp = null, ultimoRes = null;
+const aperti = new Set();
 
 function carica() {
   try {
@@ -340,7 +359,9 @@ function aggiorna() {
     inflazione: stato.inflazione, oggi: DATI.aggiornato,
     conti: ipotesi.conti_deposito, bfp: ipotesi.bfp, etf: ipotesi.etf,
   };
+  ultimoInp = inp;
   const res = Calcolo.confronta(DATI, inp);
+  ultimoRes = res;
   const opposto = Calcolo.confronta(DATI, { ...inp, reinvesti: !stato.reinvesti }).risultati;
   for (const x of res.risultati) {
     const y = opposto.find(z => z.id === x.id);
@@ -383,14 +404,117 @@ function dettaglioCosti(x) {
   return parti.join('<br>');
 }
 
+// ---------- scenari: cosa succede se cambiano tassi o inflazione ----------
+const SPOSTAMENTI = [-2, -1, 0, 1, 2];
+function calcola(extra) { return Calcolo.confronta(DATI, { ...ultimoInp, ...extra }).risultati; }
+
+// Tasso di oggi dello strumento, per mostrare dove arriva in ogni scenario (null se non ha senso).
+function tassoBase(x) {
+  const m = /^bot(\d+)$/.exec(x.id);
+  if (m) return Calcolo.curvaBot(DATI.titoli, DATI.aggiornato)(+m[1]);
+  if (x.id === 'btp' && ultimoRes.btp) return ultimoRes.btp.ytm_lordo;
+  if (x.id === 'btpi' && ultimoRes.btpi) return ultimoRes.btpi.ytm_lordo;
+  if (x.id === 'cdl') return ipotesi.conti_deposito.libero;
+  if (x.id === 'etf-obb') return ipotesi.etf.obbligazionario.rendimento;
+  return null;
+}
+
+function perchéTassi(x) {
+  const n = x.nota || '';
+  if (x.id.startsWith('bot')) return 'A ogni rinnovo compri un nuovo BOT al tasso di quel momento: se i tassi scendono guadagni meno, se salgono guadagni di più.';
+  if (x.id === 'btp' || x.id === 'btpi') {
+    let t = 'Il rendimento del titolo è bloccato al momento dell\'acquisto: i tassi cambiano solo quanto rendono le cedole reinvestite.';
+    if (n.includes('dopo la fine')) t += ' Però scade dopo la durata scelta e va venduto prima: con tassi più alti il prezzo di vendita è più basso, con tassi più bassi è più alto.';
+    if (n.includes('vanno in BOT')) t += ' Dopo la scadenza i soldi vanno in un BOT al tasso di quel momento.';
+    return t;
+  }
+  if (x.id === 'cdv') return 'Il tasso è bloccato per la durata del vincolo; se il vincolo va rinnovato, il rinnovo prende il nuovo tasso.';
+  if (x.id === 'cdl') return 'Il tasso del conto libero può essere cambiato dalla banca in ogni momento: segue i tassi di mercato.';
+  if (x.id.startsWith('bfp')) return 'Il tasso del buono è bloccato fino alla sua scadenza; se va riacquistato, il nuovo buono avrà i tassi di quel momento.';
+  if (x.id === 'etf-obb') return 'Se i tassi salgono il prezzo dell\'ETF scende subito (circa il 7% per ogni punto), poi rende di più; se scendono, il contrario. Sulle durate brevi pesa il calo di prezzo, sulle lunghe il rendimento più alto.';
+  return '';
+}
+
+function scenari(x, tutti, T) {
+  if (x.id === 'cash') return '<p class="esito">Soldi fermi: tassi e inflazione non cambiano gli euro che hai, l\'inflazione ne riduce solo il valore.</p>';
+  // con chi confrontarlo: il BTP a tasso fisso (o, per il BTP stesso, il BTP legato all'inflazione)
+  const rifId = x.id === 'btp' ? 'btpi' : 'btp';
+  const rif = tutti.find(y => y.id === rifId) || calcola({}).find(y => y.id === rifId);
+  const rifNome = rif ? (rifId === 'btp' ? 'BTP a tasso fisso' : 'BTP legato all\'inflazione') : null;
+  const d = T % 12 === 0 ? `${T / 12} ${T === 12 ? 'anno' : 'anni'}` : `${T} mesi`;
+  let h = '<div class="scen">';
+
+  // --- tassi ---
+  if (!x.id.startsWith('etf-az')) {
+    const righe = SPOSTAMENTI.map(sh => { const r = calcola({ shift: sh }); return { sh, x: r.find(y => y.id === x.id), rif: rif && r.find(y => y.id === rifId) }; });
+    const vals = righe.map(r => r.x.finale), fermo = Math.max(...vals) - Math.min(...vals) < 1;
+    h += `<div><h4>Se i tassi cambiano</h4><p>${perchéTassi(x)} Ipotesi: i tassi si spostano subito dopo l'acquisto e restano così per ${d}. <b>1 punto = 1% in più o in meno sul tasso</b>${tassoBase(x) != null ? `: qui ${pct(tassoBase(x))} diventa ${pct(tassoBase(x) + 1)} con +1 punto` : ''}.</p>`;
+    // BTP tenuto fino a scadenza: il rendimento è bloccato, i tassi toccano solo dettagli (cedole reinvestite, pochi mesi in BOT)
+    const bloccato = (x.id === 'btp' || x.id === 'btpi') && !(x.nota || '').includes('dopo la fine');
+    if (fermo) {
+      h += `<p class="esito">In ${d} i tassi futuri non cambiano il risultato: ${eur(x.finale)} in ogni caso.</p>`;
+    } else if (bloccato) {
+      const giù = righe[0].x.finale - x.finale, su = righe[4].x.finale - x.finale;
+      const extra = (x.nota || '').includes('vanno in BOT') ? ' e i pochi mesi tra la scadenza del titolo e la fine della durata vanno in un BOT al tasso del momento' : '';
+      h = h.replace(/<p>.*?<\/p>$/, '');
+      h += `<p class="esito"><b>Lo tieni fino alla scadenza: il rendimento è bloccato il giorno in cui lo compri e i tassi futuri non lo cambiano.</b>${x.id === 'btpi' ? ' Conta solo l\'inflazione: vedi la tabella accanto.' : ''}</p>`
+        + `<p>Cambia solo quanto rendono le cedole ${stato.reinvesti ? 'che reinvesti, ricomprate al prezzo del momento' : '(con «Incassa» restano ferme sul conto)'}${extra}. Con tassi da −2 a +2 punti: tra ${giù >= 0 ? '+' : '−'}${eur(Math.abs(giù))} e ${su >= 0 ? '+' : '−'}${eur(Math.abs(su))} sul totale.</p>`;
+    } else {
+      h += `<table><tr><th>Tassi (punti percentuali)</th><th>Valore finale</th><th>Netto all'anno</th>${rif ? `<th>${rifNome}</th><th>Meglio</th>` : ''}</tr>`;
+      for (const r of righe) {
+        const tb = tassoBase(x);
+        const lab = (r.sh === 0 ? 'come oggi' : `${r.sh > 0 ? '+' : '−'}${Math.abs(r.sh)} punt${Math.abs(r.sh) === 1 ? 'o' : 'i'}`) + (tb != null ? ` (${pct(Math.max(0, tb + r.sh))})` : '');
+        const meglio = r.rif ? (r.x.finale >= r.rif.finale ? 'questo' : (rifId === 'btp' ? 'BTP fisso' : 'BTP infl.')) : '';
+        h += `<tr class="${r.sh === 0 ? 'oggi' : ''}"><td>${lab}</td><td>${eur(r.x.finale)}</td><td>${pct(r.x.annuo)}</td>${r.rif ? `<td>${eur(r.rif.finale)}</td><td>${meglio}</td>` : ''}</tr>`;
+      }
+      h += '</table>';
+      const giù = righe[0].x.finale - x.finale, su = righe[4].x.finale - x.finale;
+      h += `<p class="esito">Con tassi 2 punti più bassi: ${giù >= 0 ? '+' : '−'}${eur(Math.abs(giù))}; con tassi 2 punti più alti: ${su >= 0 ? '+' : '−'}${eur(Math.abs(su))} rispetto a oggi.</p>`;
+    }
+    h += '</div>';
+  } else {
+    h += `<div><h4>Se i tassi cambiano</h4><p>Per un ETF azionario conta l'andamento della Borsa, non i tassi: guarda le tre righe pessimista, medio e ottimista.</p></div>`;
+  }
+
+  // --- inflazione ---
+  const livelli = [...new Set([0, 1, 2, 3, 4, 6, stato.inflazione])].sort((a, b) => a - b);
+  const righeI = livelli.map(i => { const r = calcola({ inflazione: i }); return { i, x: r.find(y => y.id === x.id), rif: rif && r.find(y => y.id === rifId) }; });
+  const indicizzato = x.id === 'btpi';
+  h += `<div><h4>Se l'inflazione media è…</h4><p>${indicizzato
+    ? 'Capitale e cedole seguono l\'inflazione: il netto meno inflazione resta quasi uguale qualunque sia l\'inflazione. È la protezione.'
+    : 'Gli euro che ricevi sono sempre gli stessi: più l\'inflazione è alta, più il netto meno inflazione scende.'}
+    Verde: ogni anno il potere d'acquisto cresce un po'. Rosso: ogni anno cala un po'.</p>`;
+  h += `<table><tr><th>Inflazione</th><th>Valore finale</th><th>Netto meno infl., all'anno</th>${rif ? `<th>${rifId === 'btp' ? 'BTP fisso' : 'BTP infl.'}: valore finale</th><th>${rifId === 'btp' ? 'BTP fisso' : 'BTP infl.'}: netto meno infl., all'anno</th><th>Meglio</th>` : ''}</tr>`;
+  for (const r of righeI) {
+    const meglio = r.rif ? (r.x.finale >= r.rif.finale ? 'questo' : (rifId === 'btp' ? 'BTP fisso' : 'BTP infl.')) : '';
+    h += `<tr class="${r.i === stato.inflazione ? 'oggi' : ''}"><td>${pct(r.i)}${r.i === stato.inflazione ? ' ◀' : ''}</td><td>${eur(r.x.finale)}</td><td class="${r.x.reale >= 0 ? 'pos' : 'neg'}">${pct(r.x.reale)}</td>${r.rif ? `<td>${eur(r.rif.finale)}</td><td class="${r.rif.reale >= 0 ? 'pos' : 'neg'}">${pct(r.rif.reale)}</td><td>${meglio}</td>` : ''}</tr>`;
+  }
+  h += '</table>';
+  if (rif && (x.id === 'btp' || x.id === 'btpi')) {
+    // inflazione di pareggio tra BTP fisso e BTP legato all'inflazione
+    const diff = i => { const r = calcola({ inflazione: i }); return r.find(y => y.id === 'btpi').finale - r.find(y => y.id === 'btp').finale; };
+    let a = -1, b = 10;
+    if (diff(a) < 0 && diff(b) > 0) {
+      for (let k = 0; k < 18; k++) { const m = (a + b) / 2; diff(m) > 0 ? b = m : a = m; }
+      h += `<p class="esito"><b>Pareggio: inflazione media del ${pct((a + b) / 2)}.</b> Sopra conviene il BTP legato all'inflazione, sotto il BTP a tasso fisso.</p>`;
+    }
+  } else {
+    const zero = righeI.find(r => r.x.reale < 0);
+    h += `<p class="esito">${zero ? `Con inflazione dal ${pct(zero.i)} in su perdi potere d'acquisto.` : 'In tutti questi scenari il potere d\'acquisto cresce.'}</p>`;
+  }
+  h += '</div></div>';
+  return h;
+}
+
 function tabella(res, T) {
   const r = res.risultati, max = Math.max(...r.map(x => x.finale));
   let h = `<thead><tr><th>#</th><th>Strumento</th><th>Garanzia</th><th>Valore finale netto</th><th>Guadagno netto</th><th title="Il guadagno netto trasformato in una percentuale all'anno">Netto all'anno</th><th title="Netto all'anno meno l'inflazione: quanto cresce davvero quello che puoi comprare">Netto meno inflazione, all'anno</th><th>Tasse</th><th>Costi</th><th title="Quanto in più ottieni scegliendo Reinvesti invece di Incassa">Reinvestire vale</th></tr></thead><tbody>`;
   r.forEach((x, i) => {
     const mkt = x.gruppo === 'ETF';
-    h += `<tr>
+    const aperto = aperti.has(x.id);
+    h += `<tr class="riga${aperto ? ' aperta' : ''}" data-id="${x.id}">
       <td class="num">${i + 1}</td>
-      <td><div class="n"><span class="dot" style="background:${COLORI[x.id] || '#888'}"></span>${x.nome}</div><div class="note">${x.nota}</div></td>
+      <td><div class="n"><span class="freccia">▸</span><span class="dot" style="background:${COLORI[x.id] || '#888'}"></span>${x.nome}</div><div class="note">${x.nota}</div></td>
       <td><span class="tag ${mkt ? 'mkt' : ''}">${x.garanzia}</span></td>
       <td class="num"><b>${eur(x.finale)}</b><div class="barw"><i style="width:${(x.finale / max * 100).toFixed(1)}%"></i></div></td>
       <td class="num ${x.guadagno >= 0 ? 'pos' : 'neg'}">${eur(x.guadagno)}</td>
@@ -400,8 +524,15 @@ function tabella(res, T) {
       <td class="num">${eur(x.costi)}${x.costi > 0 ? `<div class="note">${dettaglioCosti(x)}</div>` : ''}</td>
       <td class="num">${x.id === 'cash' ? '—' : Math.abs(x.effettoReinv) < 1 ? '0 €<div class="note">niente da<br>reinvestire</div>' : (x.effettoReinv > 0 ? '+' : '−') + eur(Math.abs(x.effettoReinv))}</td>
     </tr>`;
+    if (aperto) h += `<tr class="det"><td colspan="10">${scenari(x, r, T)}</td></tr>`;
   });
   $('#tab').innerHTML = h + '</tbody>';
+  $('#tab').onclick = e => {
+    const tr = e.target.closest('tr.riga'); if (!tr) return;
+    const id = tr.dataset.id;
+    aperti.has(id) ? aperti.delete(id) : aperti.add(id);
+    tabella(res, T);
+  };
   const es = r.find(x => x.id === 'btp') || r[0];
   const d = T % 12 === 0 ? `${T / 12} ${T === 12 ? 'anno' : 'anni'}` : `${T} mesi`;
   $('#legenda').innerHTML = `<b>Netto all'anno</b>: quanto ti rende ogni anno, in percentuale, dopo tasse e costi. Esempio: ${es.nome} trasforma ${eur(stato.capitale)} in ${eur(es.finale)} in ${d}, cioè il ${pct(es.annuo)} l'anno. `
