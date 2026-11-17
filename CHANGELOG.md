@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.4.4 — 17/11/2026
+- Guida: come si calcola l'inflazione media, con il metodo veloce (somma diviso anni) e quello esatto (media composta), con esempio e formula per Excel.
+- Precisato che l'inflazione degli scenari e del campo in alto è la media all'anno su tutta la durata dell'investimento.
+
 ## v1.4.3 — 17/11/2026
 - Scenari d'inflazione più semplici: «Valore finale» e «Netto meno inflazione, all'anno» per lo strumento e per quello di confronto, più la colonna «Meglio».
 

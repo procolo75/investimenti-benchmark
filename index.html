@@ -131,7 +131,7 @@ a{color:var(--accent)}
         <div class="hint" id="reinvHint"></div>
       </div>
       <div>
-        <label for="inflazione">Inflazione media attesa (% annua)</label>
+        <label for="inflazione">Inflazione media attesa (% all'anno, su tutta la durata)</label>
         <input id="inflazione" type="number" step="0.1" value="2.5">
         <div class="hint" id="inflHint"></div>
       </div>
@@ -480,7 +480,7 @@ function scenari(x, tutti, T) {
   const livelli = [...new Set([0, 1, 2, 3, 4, 6, stato.inflazione])].sort((a, b) => a - b);
   const righeI = livelli.map(i => { const r = calcola({ inflazione: i }); return { i, x: r.find(y => y.id === x.id), rif: rif && r.find(y => y.id === rifId) }; });
   const indicizzato = x.id === 'btpi';
-  h += `<div><h4>Se l'inflazione media è…</h4><p>${indicizzato
+  h += `<div><h4>Se l'inflazione media è…</h4><p><b>Media all'anno su tutti i ${d} dell'investimento</b>: «3%» vuol dire prezzi in aumento del 3% ogni anno, in media, fino alla fine. ${indicizzato
     ? 'Capitale e cedole seguono l\'inflazione: il netto meno inflazione resta quasi uguale qualunque sia l\'inflazione. È la protezione.'
     : 'Gli euro che ricevi sono sempre gli stessi: più l\'inflazione è alta, più il netto meno inflazione scende.'}
     Verde: ogni anno il potere d'acquisto cresce un po'. Rosso: ogni anno cala un po'.</p>`;
