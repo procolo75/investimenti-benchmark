@@ -1,0 +1,32 @@
+# Aggiorna tassi.json e tassi.js nei giorni feriali dopo la chiusura dei mercati, poi fa commit.
+name: Aggiorna tassi
+
+on:
+  schedule:
+    - cron: '30 19 * * 1-5'   # giorni feriali, dopo la chiusura del MOT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: python3 aggiorna_tassi.py
+      - run: node test.js
+      - name: Commit se cambiato
+        run: |
+          if git diff --quiet -- tassi.json tassi.js; then echo "nessuna modifica"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898315+github-actions[bot]@users.noreply.github.com"
+          git add tassi.json tassi.js
+          git commit -m "Aggiorna tassi $(date +%F)"
+          git push

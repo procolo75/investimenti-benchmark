@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchmark Investimenti</title>
+<meta name="description" content="Confronta il rendimento netto di BOT, BTP, BTP indicizzati, conti deposito, buoni postali ed ETF, con tasse, bollo e commissioni.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232563eb'/><path d='M7 22l6-6 4 4 8-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --ink:#1a1d23; --muted:#5d6573; --line:#e3e6eb; --soft:#eef1f5;
+  --accent:#2563eb; --accent-ink:#ffffff; --good:#0f7a4a; --bad:#b42318; --warn-bg:#fff6e0; --warn-ink:#7a5200;
+  --bar:#c7d6f7;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111318; --card:#1a1d24; --ink:#e7e9ee; --muted:#9aa3b2; --line:#2c313b; --soft:#232832;
+    --accent:#6b9bff; --accent-ink:#0b1020; --good:#4cc38a; --bad:#ff7b72; --warn-bg:#3a2e12; --warn-ink:#f5d58a;
+    --bar:#2f4a80;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111318; --card:#1a1d24; --ink:#e7e9ee; --muted:#9aa3b2; --line:#2c313b; --soft:#232832;
+  --accent:#6b9bff; --accent-ink:#0b1020; --good:#4cc38a; --bad:#ff7b72; --warn-bg:#3a2e12; --warn-ink:#f5d58a;
+  --bar:#2f4a80;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.6rem;margin:0 0 4px}
+h2{font-size:1.1rem;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-radius:8px;padding:8px 12px;margin:8px 0 0;font-size:.9rem}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:14px 18px}
+.form>div{min-width:0}
+label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+input,select{max-width:100%;min-width:0;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 9px;width:100%}
+input:focus,select:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.row{display:flex;gap:6px}
+.row>*{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:999px;padding:3px 10px;font-size:.82rem;cursor:pointer}
+.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{flex:1;border:0;background:var(--card);color:var(--ink);padding:7px 6px;font:inherit;font-size:.88rem;cursor:pointer}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.hint{font-size:.8rem;color:var(--muted);margin-top:4px}
+details{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600}
+.ipotesi{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:14px 22px;margin-top:12px}
+.ipotesi fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0}
+.ipotesi legend{font-weight:600;font-size:.9rem;padding:0 4px}
+.kv{display:grid;grid-template-columns:1fr 90px;gap:6px 10px;align-items:center;font-size:.88rem}
+.kv input{padding:4px 6px;text-align:right}
+.btn{font:inherit;border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat .k{font-size:.8rem;color:var(--muted)}
+.stat .v{font-size:1.35rem;font-weight:700;margin:2px 0}
+.stat .d{font-size:.85rem;color:var(--muted)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card)}
+th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3){text-align:left}
+td:nth-child(2){white-space:normal;min-width:190px}
+th{white-space:normal}
+td .n{font-weight:600}
+td .note{font-size:.78rem;color:var(--muted);margin-top:2px}
+td.num{font-variant-numeric:tabular-nums}
+.pos{color:var(--good)} .neg{color:var(--bad)}
+.barw{height:5px;background:var(--soft);border-radius:3px;margin-top:4px}
+.barw i{display:block;height:100%;background:var(--bar);border-radius:3px}
+.tag{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--soft);color:var(--muted);white-space:nowrap}
+.tag.mkt{background:var(--warn-bg);color:var(--warn-ink)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.chartw{position:relative;height:380px}
+.notes{font-size:.88rem;color:var(--muted)}
+.notes table{font-size:.85rem;margin:8px 0 12px}
+.notes th,.notes td{text-align:left;white-space:normal}
+footer{font-size:.8rem;color:var(--muted);text-align:center;margin-top:24px}
+a{color:var(--accent)}
+.theme{float:right}
+@media (max-width:600px){ h1{font-size:1.3rem} .chartw{height:300px} }
+</style>
+</head>
+<body>
+<main>
+  <div class="theme"><a class="btn" href="guida.html" style="text-decoration:none;margin-right:6px">📖 Guida</a><button class="btn" id="tema" title="Tema chiaro/scuro">◐</button></div>
+  <h1>Benchmark Investimenti</h1>
+  <p class="sub">Quanto ti resta davvero in tasca, dopo tasse, bollo e commissioni: BOT, BTP, BTP indicizzati, conti deposito, buoni postali ed ETF a confronto.</p>
+  <div id="aggiornamento" class="hint"></div>
+
+  <section class="card" style="margin-top:12px">
+    <div class="form">
+      <div>
+        <label for="capitale">Importo da investire (€)</label>
+        <input id="capitale" type="number" min="100" step="500" value="10000">
+      </div>
+      <div>
+        <label for="durata">Durata</label>
+        <div class="row">
+          <input id="durata" type="number" min="1" step="1" value="5">
+          <select id="unita"><option value="anni">anni</option><option value="mesi">mesi</option></select>
+        </div>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div>
+        <label>Cedole e interessi</label>
+        <div class="seg" id="reinvesti">
+          <button data-v="1" class="on">Reinvesti</button>
+          <button data-v="0">Incassa</button>
+        </div>
+        <div class="hint" id="reinvHint"></div>
+      </div>
+      <div>
+        <label for="inflazione">Inflazione media attesa (% annua)</label>
+        <input id="inflazione" type="number" step="0.1" value="2.5">
+        <div class="hint" id="inflHint"></div>
+      </div>
+      <div>
+        <label for="preset">Commissioni del broker</label>
+        <select id="preset">
+          <option value="std">Broker online: 0,19% (min 2,95 €, max 19 €)</option>
+          <option value="low">Broker economico: 1,50 € fissi</option>
+          <option value="banca">Banca tradizionale: 0,50% (min 10 €, max 50 €)</option>
+          <option value="zero">Nessuna commissione</option>
+          <option value="custom">Personalizzate</option>
+        </select>
+        <div class="row" style="margin-top:6px">
+          <input id="cPct" type="number" step="0.01" title="% sull'importo" aria-label="Percentuale">
+          <input id="cMin" type="number" step="0.5" title="Minimo €" aria-label="Minimo euro">
+          <input id="cMax" type="number" step="0.5" title="Massimo € (0 = nessuno)" aria-label="Massimo euro">
+        </div>
+        <div class="hint">% · minimo € · massimo € per ogni compravendita</div>
+      </div>
+      <div>
+        <label for="spese">Spese fisse conto titoli (€ / anno)</label>
+        <input id="spese" type="number" min="0" step="5" value="0">
+        <div class="hint">Canone del deposito titoli, se c'è.</div>
+      </div>
+      <div>
+        <label>Confronta anche</label>
+        <div class="chips" id="mostra" style="margin-top:0">
+          <button class="chip" data-k="bfp">Buoni postali</button>
+          <button class="chip" data-k="conti">Conti deposito</button>
+          <button class="chip" data-k="etf">ETF</button>
+        </div>
+        <div class="hint">BOT e BTP sono sempre inclusi.</div>
+      </div>
+    </div>
+
+    <details id="det">
+      <summary>Modifica i tassi che non si aggiornano da soli</summary>
+      <p class="hint" style="margin:8px 0 0">I tassi di BOT e BTP si aggiornano da soli. Quelli qui sotto no: sono valori inseriti a mano (aggiornati a novembre 2026). Se trovi un'offerta diversa (es. un conto vincolato al 3,5%) scrivila qui e il confronto la usa subito. Compaiono solo gli strumenti accesi in «Confronta anche».</p>
+      <div class="ipotesi" id="ipotesi"></div>
+      <div style="margin-top:12px"><button class="btn" id="ripristina">Ripristina i valori aggiornati</button></div>
+    </details>
+  </section>
+
+  <div class="cards" id="cards"></div>
+
+  <section class="card">
+    <h2>Classifica per valore finale netto</h2>
+    <p class="hint" id="legenda" style="margin-top:-6px"></p>
+    <div class="tw"><table id="tab"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Valore netto nel tempo</h2>
+    <p class="hint" style="margin-top:-6px">Quanto incasseresti chiudendo l'investimento in quel mese (tasse e costi di vendita già tolti). Clicca sulla legenda per nascondere o mostrare una linea.</p>
+    <div class="chartw"><canvas id="grafico"></canvas></div>
+  </section>
+
+  <section class="card notes">
+    <h2 style="color:var(--ink)">Come calcola</h2>
+    <table>
+      <tr><th>Strumento</th><th>Tasse sul guadagno</th><th>Bollo</th><th>Commissioni</th></tr>
+      <tr><td>BOT, BTP, BTP€i, BTP Italia</td><td>12,5%</td><td>0,20% l'anno sul valore</td><td>del broker; per i BOT all'asta al massimo il tetto di legge (0,03–0,15%)</td></tr>
+      <tr><td>Buoni fruttiferi postali</td><td>12,5%</td><td>esenti fino a 5.000 € complessivi</td><td>nessuna</td></tr>
+      <tr><td>Conti deposito</td><td>26%</td><td>0,20% l'anno</td><td>nessuna</td></tr>
+      <tr><td>ETF titoli di Stato</td><td>~12,5% (quota titoli di Stato), modificabile</td><td>0,20% l'anno</td><td>del broker, in acquisto e vendita, + TER</td></tr>
+      <tr><td>ETF azionario</td><td>26%</td><td>0,20% l'anno</td><td>del broker, in acquisto e vendita, + TER</td></tr>
+    </table>
+    <ul>
+      <li><b>Reinvesti</b>: cedole e interessi netti vengono reinvestiti nello stesso strumento (titoli a lotti da 1.000 € di nominale, pagando la commissione); gli ETF sono ad accumulazione. <b>Incassa</b>: restano sul conto senza rendere; gli ETF sono a distribuzione. Alla scadenza dei BOT/BTP si ricompra un BOT, con «Incassa» solo il capitale iniziale.</li>
+      <li><b>Perché reinvestire cambia poco in pochi anni</b>: con il 3% netto, su 10.000 € gli interessi sono circa 300 € l'anno; reinvestendoli guadagni il 3% di 300 €, cioè 9 € il primo anno, poi un po' di più. Su 5 anni sono qualche decina di euro, su 20 anni migliaia. Inoltre le cedole dei BTP si possono reinvestire solo quando arrivano a un lotto da 1.000 €: con cedole basse in pochi anni non ci si arriva e restano ferme.</li>
+      <li><b>BOT 3, 6 o 12 mesi rinnovati</b>: compri un BOT all'asta e a ogni scadenza ne ricompri uno uguale, fino alla fine della durata. I BOT più corti rendono di solito un po' meno e pagano più volte la commissione, ma lasciano i soldi liberi più spesso.</li>
+      <li><b>BTP</b>: la pagina sceglie da sola il BTP che scade più vicino alla durata impostata e, tra quelli vicini, quello con il miglior rendimento netto. Il nome è nella riga della tabella.</li>
+      <li>I tassi sono ipotizzati <b>costanti</b> per tutta la durata: i rinnovi (BOT, vincoli, buoni) avvengono ai tassi di oggi. Se un titolo scade dopo la durata scelta, viene venduto al prezzo che avrebbe con lo stesso rendimento di oggi: nella realtà potrebbe valere di più o di meno.</li>
+      <li>I BTP indicizzati rendono il tasso reale indicato <b>più l'inflazione</b> che imposti (BTP€i: inflazione europea; BTP Italia: italiana). L'inflazione rivaluta cedole e capitale.</li>
+      <li>Rendimento <b>reale</b> = al netto dell'inflazione impostata: sotto zero vuol dire perdere potere d'acquisto.</li>
+      <li>Gli ETF azionari sono <b>scenari</b>, non previsioni: in alcuni anni perdono anche il 20–40%. Le minusvalenze non vengono compensate.</li>
+      <li>I titoli di Stato e i buoni postali fino a 50.000 € sono esclusi dal calcolo ISEE e non pagano imposta di successione.</li>
+      <li>Non è una consulenza finanziaria: verifica sempre condizioni e fogli informativi prima di investire.</li>
+    </ul>
+    <p>Per capire tasse, bollo, commissioni e tutti i termini leggi la <a href="guida.html">guida completa</a>.</p>
+    <p>Fonti: rendimenti di BOT e BTP da <a href="https://www.simpletoolsforinvestors.eu/" target="_blank" rel="noopener">SimpleToolsForInvestors</a> (prezzi MOT); inflazione da Eurostat; tassi BCE dalla BCE. Conti deposito, buoni postali e ipotesi ETF sono aggiornati a mano.</p>
+  </section>
+  <footer>Benchmark Investimenti · dati in <code>tassi.json</code>, aggiornati ogni giorno feriale</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="calcolo.js"></script>
+<script src="tassi.js"></script>
+<script>
+'use strict';
+const $ = s => document.querySelector(s);
+const DATI = window.TASSI;
+const CHIAVE = 'investimenti-benchmark-v1';
+const PRESET = {
+  std: { pct: 0.19, min: 2.95, max: 19 },
+  low: { pct: 0, min: 1.5, max: 1.5 },
+  banca: { pct: 0.5, min: 10, max: 50 },
+  zero: { pct: 0, min: 0, max: 0 },
+};
+const COLORI = {
+  'bot3': '#93c5fd', 'bot6': '#60a5fa', 'bot12': '#2563eb', 'btp': '#0891b2', 'btpi': '#7c3aed',
+  'cdv': '#15803d', 'cdl': '#65a30d', 'bfp-3x4': '#ca8a04', 'bfp-4plus': '#b45309',
+  'etf-obb': '#db2777', 'etf-az-pessimista': '#f97316', 'etf-az-medio': '#ea580c', 'etf-az-ottimista': '#c2410c',
+  'cash': '#6b7280'
+};
+const eur = v => v.toLocaleString('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' });
+const pct = v => v == null ? '—' : (v >= 0 ? '' : '−') + Math.abs(v).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
+const dataIt = iso => iso ? iso.split('-').reverse().join('/') : '';
+const clona = o => JSON.parse(JSON.stringify(o));
+
+let ipotesi = null; // copia modificabile delle sezioni manuali
+let stato = { capitale: 10000, durata: 5, unita: 'anni', reinvesti: true, inflazione: null, preset: 'std', comm: PRESET.std, spese: 0, mostra: { bfp: true, conti: false, etf: false } };
+let grafico = null;
+
+function carica() {
+  try {
+    const s = JSON.parse(localStorage.getItem(CHIAVE) || 'null');
+    if (s) { Object.assign(stato, s.stato || {}); if (s.ipotesi && s.base === DATI.aggiornato) ipotesi = s.ipotesi; }
+  } catch (e) {}
+  if (!ipotesi) ipotesi = { conti_deposito: clona(DATI.conti_deposito), bfp: clona(DATI.bfp), etf: clona(DATI.etf) };
+  if (ipotesi.etf.obbligazionario.rendimento == null) ipotesi.etf.obbligazionario.rendimento = DATI.gov_euro_7a;
+  if (stato.inflazione == null) stato.inflazione = DATI.inflazione ? +DATI.inflazione.media_12m.toFixed(1) : 2;
+}
+function salva() {
+  try { localStorage.setItem(CHIAVE, JSON.stringify({ stato, ipotesi, base: DATI.aggiornato })); } catch (e) {}
+}
+const mesi = () => Math.max(1, Math.min(360, Math.round(stato.unita === 'anni' ? stato.durata * 12 : stato.durata)));
+
+// ---------- intestazione ----------
+function intestazione() {
+  const giorni = Math.round((Date.now() - new Date(DATI.aggiornato)) / 86400000);
+  const prezzi = DATI.titoli.reduce((m, t) => t.data_prezzo > m ? t.data_prezzo : m, '');
+  let h = `Rendimenti dei titoli di Stato al <b>${dataIt(prezzi)}</b> · inflazione ${DATI.inflazione ? `${pct(DATI.inflazione.annua_ultima)} (${DATI.inflazione.mese})` : 'n.d.'} · tasso BCE ${pct(DATI.bce_deposito)} · conti e buoni aggiornati a mano al ${dataIt(DATI.conti_deposito.aggiornato)}`;
+  if (giorni > 7) h += `<div class="warn">I tassi hanno ${giorni} giorni: esegui <code>python3 aggiorna_tassi.py</code> per aggiornarli.</div>`;
+  if (DATI.avvisi && DATI.avvisi.length) h += `<div class="warn">Ultimo aggiornamento parziale: ${DATI.avvisi.join('; ')}</div>`;
+  $('#aggiornamento').innerHTML = h;
+}
+
+// ---------- form ----------
+function initForm() {
+  $('#capitale').value = stato.capitale;
+  $('#durata').value = stato.durata;
+  $('#unita').value = stato.unita;
+  $('#inflazione').value = stato.inflazione;
+  $('#spese').value = stato.spese;
+  $('#preset').value = stato.preset;
+  setComm(stato.comm);
+  segna('#reinvesti', stato.reinvesti ? '1' : '0');
+
+  const inf = DATI.inflazione;
+  $('#inflHint').innerHTML = inf ? `Ultimo dato ${pct(inf.annua_ultima)} (${inf.mese}), media 12 mesi ${pct(inf.media_12m)}<span id="bei"></span>.` : '';
+
+  const chip = [[6, 'mesi', '6 mesi'], [1, 'anni', '1 anno'], [2, 'anni', '2'], [3, 'anni', '3'], [5, 'anni', '5'], [10, 'anni', '10'], [20, 'anni', '20'], [30, 'anni', '30 anni']];
+  $('#chips').innerHTML = chip.map(([v, u, l]) => `<button class="chip" data-v="${v}" data-u="${u}">${l}</button>`).join('');
+  $('#chips').onclick = e => { const b = e.target.closest('.chip'); if (!b) return; stato.durata = +b.dataset.v; stato.unita = b.dataset.u; $('#durata').value = stato.durata; $('#unita').value = stato.unita; aggiorna(); };
+
+  const num = (id, k) => $(id).addEventListener('input', () => { const v = parseFloat($(id).value); if (isFinite(v)) { stato[k] = v; aggiorna(); } });
+  num('#capitale', 'capitale'); num('#inflazione', 'inflazione'); num('#spese', 'spese');
+  $('#durata').addEventListener('input', () => { const v = parseFloat($('#durata').value); if (v > 0) { stato.durata = v; aggiorna(); } });
+  $('#unita').addEventListener('change', () => { stato.unita = $('#unita').value; aggiorna(); });
+  $('#reinvesti').onclick = e => { const b = e.target.closest('button'); if (!b) return; stato.reinvesti = b.dataset.v === '1'; segna('#reinvesti', b.dataset.v); aggiorna(); };
+  $('#preset').addEventListener('change', () => { stato.preset = $('#preset').value; if (PRESET[stato.preset]) { stato.comm = { ...PRESET[stato.preset] }; setComm(stato.comm); } aggiorna(); });
+  for (const [id, k] of [['#cPct', 'pct'], ['#cMin', 'min'], ['#cMax', 'max']]) {
+    $(id).addEventListener('input', () => { const v = parseFloat($(id).value); stato.comm = { ...stato.comm, [k]: isFinite(v) ? v : 0 }; stato.preset = 'custom'; $('#preset').value = 'custom'; aggiorna(); });
+  }
+  $('#ripristina').onclick = () => { ipotesi = null; localStorage.removeItem(CHIAVE); carica(); disegnaIpotesi(); aggiorna(); };
+  const segnaMostra = () => document.querySelectorAll('#mostra .chip').forEach(b => b.classList.toggle('on', !!stato.mostra[b.dataset.k]));
+  segnaMostra();
+  $('#mostra').onclick = e => { const b = e.target.closest('.chip'); if (!b) return; stato.mostra = { ...stato.mostra, [b.dataset.k]: !stato.mostra[b.dataset.k] }; segnaMostra(); aggiorna(); };
+  $('#tema').onclick = () => {
+    const scuro = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.dataset.theme = scuro ? 'light' : 'dark';
+    try { localStorage.setItem(CHIAVE + '-tema', document.documentElement.dataset.theme); } catch (e) {}
+    aggiorna();
+  };
+}
+function segna(sel, v) { document.querySelectorAll(sel + ' button').forEach(b => b.classList.toggle('on', b.dataset.v === v)); }
+function setComm(c) { $('#cPct').value = c.pct; $('#cMin').value = c.min; $('#cMax').value = c.max; }
+
+// Campi modificabili per conti, buoni ed ETF, legati a un percorso dentro "ipotesi".
+function disegnaIpotesi() {
+  const cd = ipotesi.conti_deposito, e = ipotesi.etf;
+  const campo = (label, path, step = 0.05) => `<label>${label}</label><input type="number" step="${step}" data-path="${path}" value="${leggi(path)}">`;
+  let h = `<fieldset data-g="conti"><legend>Conti deposito (% lorda)</legend><div class="kv">${campo('Libero', 'conti_deposito.libero')}`;
+  for (const d of Object.keys(cd.vincolati).sort((a, b) => a - b)) h += campo(`Vincolato ${d} mesi`, `conti_deposito.vincolati.${d}`);
+  h += `</div><div class="hint">${cd.nota}</div></fieldset>`;
+  h += `<fieldset data-g="bfp"><legend>Buoni fruttiferi postali (% lorda annua)</legend><div class="kv">`;
+  ipotesi.bfp.buoni.forEach((b, i) => b.tappe.forEach((t, j) => { h += campo(`${b.nome} a ${t[0]} anni`, `bfp.buoni.${i}.tappe.${j}.1`, 0.01); }));
+  h += `</div><div class="hint">${ipotesi.bfp.nota}</div></fieldset>`;
+  h += `<fieldset data-g="etf"><legend>ETF</legend><div class="kv">
+    ${campo('Titoli di Stato: rendimento %', 'etf.obbligazionario.rendimento')}
+    ${campo('Titoli di Stato: TER %', 'etf.obbligazionario.ter', 0.01)}
+    ${campo('Titoli di Stato: tasse %', 'etf.obbligazionario.tasse', 0.5)}
+    ${campo('Azionario pessimista %', 'etf.azionario.scenari.pessimista', 0.5)}
+    ${campo('Azionario medio %', 'etf.azionario.scenari.medio', 0.5)}
+    ${campo('Azionario ottimista %', 'etf.azionario.scenari.ottimista', 0.5)}
+    ${campo('Azionario: TER %', 'etf.azionario.ter', 0.01)}
+    ${campo('Azionario: dividendi %', 'etf.azionario.dividendi', 0.1)}
+  </div><div class="hint">Rendimento ETF titoli di Stato predefinito: curva BCE area euro a 7 anni (${pct(DATI.gov_euro_7a)}). Scenari azionari: rendimenti annui totali lordi, ipotesi.</div></fieldset>`;
+  $('#ipotesi').innerHTML = h;
+  $('#ipotesi').oninput = ev => {
+    const el = ev.target; if (!el.dataset.path) return;
+    const v = parseFloat(el.value); if (!isFinite(v)) return;
+    scrivi(el.dataset.path, v); aggiorna();
+  };
+}
+function leggi(path) { return path.split('.').reduce((o, k) => o[k], ipotesi); }
+function scrivi(path, v) { const k = path.split('.'); const last = k.pop(); k.reduce((o, x) => o[x], ipotesi)[last] = v; }
+
+
+// ---------- calcolo e output ----------
+function aggiorna() {
+  salva();
+  document.querySelectorAll('#ipotesi fieldset').forEach(f => { f.hidden = !stato.mostra[f.dataset.g]; });
+  $('#det').hidden = !Object.values(stato.mostra).some(Boolean);
+  const T = mesi();
+  $('#reinvHint').textContent = (stato.reinvesti ? 'Cedole e interessi netti si sommano al capitale e rendono a loro volta.' : 'Cedole e interessi restano sul conto, senza rendere.')
+    + ' La differenza tra le due scelte è nella colonna «Reinvestire vale»: piccola in pochi anni, grande dopo 10–20.';
+
+  const inp = {
+    mesi: T, capitale: stato.capitale, reinvesti: stato.reinvesti, comm: stato.comm, speseAnnue: stato.spese,
+    inflazione: stato.inflazione, oggi: DATI.aggiornato,
+    conti: ipotesi.conti_deposito, bfp: ipotesi.bfp, etf: ipotesi.etf,
+  };
+  const res = Calcolo.confronta(DATI, inp);
+  const opposto = Calcolo.confronta(DATI, { ...inp, reinvesti: !stato.reinvesti }).risultati;
+  for (const x of res.risultati) {
+    const y = opposto.find(z => z.id === x.id);
+    x.effettoReinv = stato.reinvesti ? x.finale - y.finale : y.finale - x.finale;
+  }
+  const gruppo = id => id.startsWith('cd') ? 'conti' : id.startsWith('etf') ? 'etf' : id.startsWith('bfp') ? 'bfp' : null;
+  res.risultati = res.risultati.filter(x => { const g = gruppo(x.id); return !g || stato.mostra[g]; });
+  if (res.btp && res.btpi) {
+    const bei = res.btp.ytm_lordo - res.btpi.ytm_lordo;
+    const s = document.getElementById('bei'); if (s) s.textContent = `, implicita nei BTP (${Math.round(T / 12)} anni) ${pct(bei)}`;
+  }
+  schede(res, T);
+  tabella(res, T);
+  disegnaGrafico(res, T);
+}
+
+function schede(res, T) {
+  const r = res.risultati;
+  const garantiti = r.filter(x => x.gruppo !== 'ETF' && x.id !== 'cash');
+  const best = garantiti[0];
+  const infl = res.inflazione[T];
+  const durata = T % 12 === 0 ? `${T / 12} ${T === 12 ? 'anno' : 'anni'}` : `${T} mesi`;
+  $('#cards').innerHTML = `
+    <div class="stat"><div class="k">Migliore senza rischio di mercato</div><div class="v">${eur(best.finale)}</div>
+      <div class="d">${best.nome} · ${pct(best.annuo)} netto l'anno</div></div>
+    <div class="stat"><div class="k">Reinvestire invece di incassare, con il migliore</div><div class="v">${Math.abs(best.effettoReinv) < 1 ? '0 €' : (best.effettoReinv > 0 ? '+' : '−') + eur(Math.abs(best.effettoReinv))}</div>
+      <div class="d">${Math.abs(best.effettoReinv) < 1
+        ? `con ${best.nome} in ${durata} non c'è niente da reinvestire: il guadagno arriva tutto alla fine`
+        : `in ${durata}: l'interesse sugli interessi pesa davvero solo sulle durate lunghe`}</div></div>
+    <div class="stat"><div class="k">Per non perdere potere d'acquisto in ${durata}</div><div class="v">${eur(infl)}</div>
+      <div class="d">con inflazione al ${pct(stato.inflazione)} l'anno</div></div>`;
+}
+
+function dettaglioCosti(x) {
+  const parti = [];
+  const spese = x.costi - (x.commissioni || 0) - (x.bollo || 0);
+  if (x.bollo > 0.5) parti.push(`bollo ${eur(x.bollo)}`);
+  if (x.commissioni > 0.5) parti.push(`commiss. ${eur(x.commissioni)}`);
+  if (spese > 0.5) parti.push(`spese ${eur(spese)}`);
+  return parti.join('<br>');
+}
+
+function tabella(res, T) {
+  const r = res.risultati, max = Math.max(...r.map(x => x.finale));
+  let h = `<thead><tr><th>#</th><th>Strumento</th><th>Garanzia</th><th>Valore finale netto</th><th>Guadagno netto</th><th title="Il guadagno netto trasformato in una percentuale all'anno">Netto all'anno</th><th title="Netto all'anno meno l'inflazione: quanto cresce davvero quello che puoi comprare">Netto meno inflazione, all'anno</th><th>Tasse</th><th>Costi</th><th title="Quanto in più ottieni scegliendo Reinvesti invece di Incassa">Reinvestire vale</th></tr></thead><tbody>`;
+  r.forEach((x, i) => {
+    const mkt = x.gruppo === 'ETF';
+    h += `<tr>
+      <td class="num">${i + 1}</td>
+      <td><div class="n"><span class="dot" style="background:${COLORI[x.id] || '#888'}"></span>${x.nome}</div><div class="note">${x.nota}</div></td>
+      <td><span class="tag ${mkt ? 'mkt' : ''}">${x.garanzia}</span></td>
+      <td class="num"><b>${eur(x.finale)}</b><div class="barw"><i style="width:${(x.finale / max * 100).toFixed(1)}%"></i></div></td>
+      <td class="num ${x.guadagno >= 0 ? 'pos' : 'neg'}">${eur(x.guadagno)}</td>
+      <td class="num">${pct(x.annuo)}</td>
+      <td class="num ${x.reale >= 0 ? 'pos' : 'neg'}">${pct(x.reale)}</td>
+      <td class="num">${eur(x.tasse)}</td>
+      <td class="num">${eur(x.costi)}${x.costi > 0 ? `<div class="note">${dettaglioCosti(x)}</div>` : ''}</td>
+      <td class="num">${x.id === 'cash' ? '—' : Math.abs(x.effettoReinv) < 1 ? '0 €<div class="note">niente da<br>reinvestire</div>' : (x.effettoReinv > 0 ? '+' : '−') + eur(Math.abs(x.effettoReinv))}</td>
+    </tr>`;
+  });
+  $('#tab').innerHTML = h + '</tbody>';
+  const es = r.find(x => x.id === 'btp') || r[0];
+  const d = T % 12 === 0 ? `${T / 12} ${T === 12 ? 'anno' : 'anni'}` : `${T} mesi`;
+  $('#legenda').innerHTML = `<b>Netto all'anno</b>: quanto ti rende ogni anno, in percentuale, dopo tasse e costi. Esempio: ${es.nome} trasforma ${eur(stato.capitale)} in ${eur(es.finale)} in ${d}, cioè il ${pct(es.annuo)} l'anno. `
+    + `<br><b>Netto meno inflazione, all'anno</b>: il «netto all'anno» meno l'inflazione che hai impostato (${pct(stato.inflazione)}). È una percentuale <b>all'anno</b>, come la colonna accanto. Verde: ogni anno il tuo potere d'acquisto cresce un po'. Rosso: ogni anno cala un po', anche se gli euro aumentano. `
+    + `<br><b>Sul totale</b>, con ${es.nome}: ${eur(es.finale)} fra ${d} varranno come ${eur(es.finaleReale)} di oggi. `
+    + `<br><b>Costi</b>: soprattutto il bollo (0,20% l'anno del valore investito, ${eur(stato.capitale * 0.002)} l'anno sul tuo importo) più le commissioni del broker.`;
+}
+
+function disegnaGrafico(res, T) {
+  if (!window.Chart) return;
+  const css = getComputedStyle(document.documentElement);
+  const ink = css.getPropertyValue('--muted').trim(), line = css.getPropertyValue('--line').trim();
+  const nascosti = grafico ? new Set(grafico.data.datasets.filter((d, i) => !grafico.isDatasetVisible(i)).map(d => d.id)) : new Set(['etf-az-pessimista', 'etf-az-ottimista']);
+  const passo = T > 120 ? 3 : 1;
+  const idx = []; for (let m = 0; m <= T; m += passo) idx.push(m); if (idx[idx.length - 1] !== T) idx.push(T);
+  const etichetta = m => T <= 24 ? `${m} m` : (m % 12 === 0 ? `${m / 12} a` : `${(m / 12).toFixed(1).replace('.', ',')} a`);
+  const ds = res.risultati.map(x => ({
+    id: x.id, label: x.nome, data: idx.map(m => x.serie[m]),
+    borderColor: COLORI[x.id] || '#888', backgroundColor: COLORI[x.id] || '#888',
+    borderWidth: x.id.startsWith('etf-az') && x.id !== 'etf-az-medio' ? 1.5 : 2,
+    borderDash: x.gruppo === 'ETF' ? [5, 4] : [], pointRadius: 0, tension: 0, hidden: nascosti.has(x.id),
+  }));
+  ds.push({ id: 'infl', label: 'Potere d\'acquisto (inflazione)', data: idx.map(m => res.inflazione[m]), borderColor: ink, borderDash: [2, 3], borderWidth: 1.5, pointRadius: 0, hidden: nascosti.has('infl') });
+  if (grafico) grafico.destroy();
+  grafico = new Chart($('#grafico'), {
+    type: 'line',
+    data: { labels: idx.map(etichetta), datasets: ds },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'bottom', labels: { color: ink, boxWidth: 12, boxHeight: 2, font: { size: 11 } } },
+        tooltip: { itemSort: (a, b) => b.parsed.y - a.parsed.y, callbacks: { label: c => ` ${c.dataset.label}: ${eur(c.parsed.y)}` } },
+      },
+      scales: {
+        x: { ticks: { color: ink, maxTicksLimit: 12, autoSkip: true }, grid: { color: line } },
+        y: { ticks: { color: ink, callback: v => eur(v) }, grid: { color: line } },
+      },
+    },
+  });
+}
+
+// ---------- avvio ----------
+try { const t = localStorage.getItem(CHIAVE + '-tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+if (!DATI || !window.Calcolo) {
+  document.querySelector('main').insertAdjacentHTML('afterbegin', '<div class="warn">Mancano tassi.js o calcolo.js: esegui <code>python3 aggiorna_tassi.py</code>.</div>');
+} else {
+  carica(); intestazione(); initForm(); disegnaIpotesi(); aggiorna();
+  try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', aggiorna); } catch (e) {}
+}
+</script>
+</body>
+</html>

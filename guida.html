@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida Investimenti</title>
+<meta name="description" content="Guida semplice a BOT, BTP, buoni postali, conti deposito ed ETF: tasse, bollo, commissioni, inflazione e reinvestimento.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232563eb'/><path d='M7 22l6-6 4 4 8-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --ink:#1a1d23; --muted:#5d6573; --line:#e3e6eb; --soft:#eef1f5;
+  --accent:#2563eb; --good:#0f7a4a; --bad:#b42318; --warn-bg:#fff6e0; --warn-ink:#7a5200; --ex-bg:#eef4ff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111318; --card:#1a1d24; --ink:#e7e9ee; --muted:#9aa3b2; --line:#2c313b; --soft:#232832;
+    --accent:#6b9bff; --good:#4cc38a; --bad:#ff7b72; --warn-bg:#3a2e12; --warn-ink:#f5d58a; --ex-bg:#1c2740;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111318; --card:#1a1d24; --ink:#e7e9ee; --muted:#9aa3b2; --line:#2c313b; --soft:#232832;
+  --accent:#6b9bff; --good:#4cc38a; --bad:#ff7b72; --warn-bg:#3a2e12; --warn-ink:#f5d58a; --ex-bg:#1c2740;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.7rem;margin:8px 0 4px;line-height:1.25}
+h2{font-size:1.3rem;margin:0 0 10px;line-height:1.3}
+h3{font-size:1.05rem;margin:18px 0 6px}
+p{margin:0 0 10px}
+.sub{color:var(--muted)}
+a{color:var(--accent)}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px;scroll-margin-top:12px}
+nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:16px 0}
+nav.toc ol{margin:6px 0 0;padding-left:22px;columns:2;column-gap:28px}
+nav.toc li{margin:2px 0;break-inside:avoid}
+.ex{background:var(--ex-bg);border-radius:10px;padding:12px 14px;margin:10px 0}
+.ex b:first-child{display:block;margin-bottom:4px}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:10px 14px;margin:10px 0}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.82rem}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+ul,ol{padding-left:22px;margin:6px 0 10px}
+li{margin:3px 0}
+dl{margin:0}
+dt{font-weight:600;margin-top:10px}
+dd{margin:2px 0 0 0;color:var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.btn{font:inherit;font-size:.9rem;border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-decoration:none}
+footer{font-size:.82rem;color:var(--muted);text-align:center;margin-top:24px}
+@media (max-width:600px){ nav.toc ol{columns:1} h1{font-size:1.4rem} section{padding:14px} }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <a class="btn" href="index.html">← Torna al confronto</a>
+    <button class="btn" id="tema" title="Tema chiaro/scuro">◐</button>
+  </div>
+  <h1>Guida: tasse, bollo, commissioni e tutto il resto</h1>
+  <p class="sub">Cosa succede ai tuoi soldi quando compri BOT, BTP, buoni postali, conti deposito o ETF, spiegato con esempi in euro. Regole italiane per una persona fisica, in vigore a novembre 2026.</p>
+
+  <nav class="toc">
+    <b>Indice</b>
+    <ol>
+      <li><a href="#parole">Le parole di base</a></li>
+      <li><a href="#strumenti">Gli strumenti, uno per uno</a></li>
+      <li><a href="#tasse">Le tasse</a></li>
+      <li><a href="#bollo">Il bollo</a></li>
+      <li><a href="#commissioni">Commissioni e altri costi</a></li>
+      <li><a href="#inflazione">Inflazione e rendimento reale</a></li>
+      <li><a href="#reinvestire">Reinvestire o incassare</a></li>
+      <li><a href="#rischi">Garanzie e rischi</a></li>
+      <li><a href="#vantaggi">Vantaggi nascosti dei titoli di Stato</a></li>
+      <li><a href="#esempio">Un esempio completo</a></li>
+      <li><a href="#pagina">Come leggere la pagina del confronto</a></li>
+      <li><a href="#glossario">Glossario veloce</a></li>
+    </ol>
+  </nav>
+
+  <section id="parole">
+    <h2>1. Le parole di base</h2>
+    <dl>
+      <dt>Lordo e netto</dt>
+      <dd><b>Lordo</b> è quanto rende uno strumento prima di tasse e costi. <b>Netto</b> è quello che ti resta davvero. I tassi pubblicizzati (BOT al 3,2%, conto al 3%) sono quasi sempre lordi.</dd>
+      <dt>Valore nominale</dt>
+      <dd>La cifra che lo Stato ti restituisce alla scadenza: si ragiona sempre «per 100». Un BTP da 10.000 € nominali alla scadenza ti rende 10.000 €, qualunque prezzo tu abbia pagato.</dd>
+      <dt>Prezzo</dt>
+      <dd>Quanto paghi oggi per 100 di nominale. Se il prezzo è 97, per 10.000 € nominali paghi 9.700 € e alla scadenza ne ricevi 10.000: i 300 € di differenza sono un guadagno. Se il prezzo è 103 paghi 10.300 € e alla scadenza perdi 300 €, ma di solito quel titolo ha cedole più alte che compensano.</dd>
+      <dt>Cedola</dt>
+      <dd>Gli interessi che un BTP paga a date fisse, <b>ogni 6 mesi</b>. Un BTP con cedola 3% paga 1,5% ogni semestre sul nominale. I BOT non hanno cedole.</dd>
+      <dt>Rendimento a scadenza</dt>
+      <dd>Il numero più importante: quanto rende all'anno un titolo comprato oggi a quel prezzo e tenuto fino alla scadenza, mettendo insieme cedole e differenza tra prezzo e 100. È il numero da confrontare tra titoli diversi, non la cedola.</dd>
+      <dt>Scadenza</dt>
+      <dd>Il giorno in cui ti restituiscono il nominale. Prima di quel giorno puoi vendere sul mercato, ma al prezzo del momento, che può essere più alto o più basso di quello che hai pagato.</dd>
+    </dl>
+  </section>
+
+  <section id="strumenti">
+    <h2>2. Gli strumenti, uno per uno</h2>
+
+    <h3>BOT (Buoni Ordinari del Tesoro)</h3>
+    <ul>
+      <li>Durano <b>3, 6 o 12 mesi</b>. Non pagano cedole: li compri sotto 100 e alla scadenza ti danno 100. Tutto il guadagno arriva alla fine.</li>
+      <li>Si comprano all'<b>asta</b> (il Tesoro li emette ogni mese, prenoti in banca o dal broker nei giorni prima) oppure sul mercato <b>MOT</b> di Borsa Italiana, dove ce ne sono con tutte le scadenze.</li>
+      <li>Lotto minimo: 1.000 € nominali.</li>
+    </ul>
+    <div class="ex"><b>Esempio: asta BOT 12 mesi dell'11/11/2026</b>
+      Prezzo medio 96,859, rendimento 3,207% lordo. Per 10.000 € nominali paghi 9.685,90 € e il 12/11/2027 ricevi 10.000 €. Guadagno lordo 314,10 €.</div>
+
+    <h3>BTP (Buoni del Tesoro Poliennali)</h3>
+    <ul>
+      <li>Durano da 2 a 50 anni e pagano una <b>cedola fissa ogni 6 mesi</b>.</li>
+      <li>Ne esistono centinaia, con scadenze diverse, tutti quotati sul MOT. Puoi scegliere quello che scade quando ti servono i soldi.</li>
+      <li>Se lo tieni <b>fino a scadenza</b> sai esattamente quanto guadagni. Se lo vendi prima il prezzo dipende dai tassi del momento: se i tassi sono saliti, vale meno.</li>
+    </ul>
+    <div class="ex"><b>Esempio: cedole</b>
+      BTP con cedola 3,15% e 10.000 € nominali: 157,50 € lordi l'anno, cioè 78,75 € ogni 6 mesi. Tolto il 12,5% di tasse ti arrivano 68,91 € a semestre.</div>
+
+    <h3>BTP legati all'inflazione (BTP€i, BTP Italia)</h3>
+    <ul>
+      <li>Il capitale si <b>rivaluta con l'inflazione</b> e le cedole si calcolano sul capitale rivalutato. Il rendimento che vedi (es. 1,70%) è il rendimento <b>reale</b>: a quello si somma l'inflazione.</li>
+      <li><b>BTP€i</b>: segue l'inflazione dell'area euro (senza tabacchi). Se c'è deflazione alla scadenza ti restituiscono comunque almeno 100.</li>
+      <li><b>BTP Italia</b>: segue l'inflazione italiana (indice FOI) e la rivalutazione viene pagata ogni 6 mesi.</li>
+      <li>Convengono rispetto ai BTP normali se l'inflazione dei prossimi anni sarà più alta di quella che il mercato si aspetta (la pagina la mostra: «implicita nei BTP»).</li>
+    </ul>
+
+    <h3>BTP Valore e BTP Più</h3>
+    <p>Versioni per i piccoli risparmiatori, vendute solo in certi periodi: cedole che crescono nel tempo («step-up») e spesso un premio finale per chi li tiene fino a scadenza. All'emissione non si pagano commissioni. Dopo il collocamento si comprano e vendono sul MOT come gli altri. La pagina non li simula perché non sono sempre disponibili.</p>
+
+    <h3>Buoni fruttiferi postali (BFP)</h3>
+    <ul>
+      <li>Emessi da Cassa Depositi e Prestiti, garantiti dallo Stato, si comprano in posta o in app. <b>Nessuna commissione</b>.</li>
+      <li>Gli interessi maturano a <b>tappe</b>: il Buono 3x4 rende qualcosa solo a 3, 6, 9 e 12 anni. Se lo chiudi a 2 anni e 11 mesi riprendi solo il capitale.</li>
+      <li>Non hanno prezzo di mercato: puoi chiederne il rimborso quando vuoi e non perdi mai il capitale.</li>
+      <li>Bollo esente se il valore complessivo dei tuoi buoni è fino a 5.000 € (vedi <a href="#bollo">bollo</a>).</li>
+    </ul>
+
+    <h3>Conto deposito</h3>
+    <ul>
+      <li>Un conto in banca solo per far rendere i soldi. <b>Libero</b>: prelevi quando vuoi, tasso più basso. <b>Vincolato</b>: blocchi i soldi per 3 mesi–5 anni, tasso più alto; se esci prima di solito perdi gli interessi.</li>
+      <li>Nessuna commissione, ma tasse più alte dei titoli di Stato (26% contro 12,5%).</li>
+      <li>Garantito dal Fondo Interbancario fino a 100.000 € per banca e per persona.</li>
+    </ul>
+
+    <h3>ETF</h3>
+    <ul>
+      <li>Fondi quotati in Borsa che replicano un indice: per esempio tutte le azioni mondiali (MSCI World) o tutti i titoli di Stato europei.</li>
+      <li>Costano poco ogni anno (<b>TER</b>, es. 0,20%), ma il valore <b>sale e scende</b>: un ETF azionario può perdere il 20–40% in un anno brutto. Ha senso su orizzonti lunghi (10 anni e più).</li>
+      <li><b>Ad accumulazione</b>: i dividendi vengono reinvestiti dentro il fondo e paghi le tasse solo quando vendi. <b>A distribuzione</b>: i dividendi ti arrivano sul conto e sono tassati subito.</li>
+    </ul>
+  </section>
+
+  <section id="tasse">
+    <h2>3. Le tasse</h2>
+    <p>Su tutti questi strumenti si paga un'imposta fissa sul guadagno, non l'IRPEF. Due aliquote:</p>
+    <div class="tw"><table>
+      <tr><th>Strumento</th><th class="n">Aliquota</th><th>Su cosa e quando</th></tr>
+      <tr><td>BOT</td><td class="n">12,5%</td><td>sulla differenza tra 100 e il prezzo d'asta; trattenuta già all'acquisto o alla scadenza</td></tr>
+      <tr><td>BTP, BTP€i, BTP Italia, BTP Valore</td><td class="n">12,5%</td><td>su ogni cedola quando la incassi; sulla differenza di prezzo alla scadenza o alla vendita; sulla rivalutazione per inflazione</td></tr>
+      <tr><td>Titoli di Stato esteri «white list» (Germania, Francia, Spagna…)</td><td class="n">12,5%</td><td>come i BTP</td></tr>
+      <tr><td>Buoni fruttiferi postali</td><td class="n">12,5%</td><td>sugli interessi, quando chiedi il rimborso</td></tr>
+      <tr><td>Conti deposito, conti correnti</td><td class="n">26%</td><td>sugli interessi, ogni volta che vengono accreditati</td></tr>
+      <tr><td>ETF azionari, azioni, obbligazioni di aziende</td><td class="n">26%</td><td>sui dividendi quando arrivano; sul guadagno quando vendi</td></tr>
+      <tr><td>ETF di titoli di Stato</td><td class="n">tra 12,5% e 26%</td><td>12,5% sulla parte del fondo investita in titoli di Stato «white list», 26% sul resto; un ETF solo di titoli di Stato europei è tassato circa al 12,5%</td></tr>
+    </table></div>
+
+    <div class="ex"><b>Esempio: stesso tasso, tasse diverse</b>
+      10.000 € per un anno al 3,2% lordo rendono 320 €.<br>
+      In BOT: tasse 12,5% = 40 € → <b>280 € netti</b>.<br>
+      In conto deposito: tasse 26% = 83,20 € → <b>236,80 € netti</b>.<br>
+      Per rendere come il BOT, il conto deposito dovrebbe offrire il 3,78% lordo.</div>
+
+    <h3>Chi le paga</h3>
+    <p>Con un normale conto titoli in banca o da un broker italiano (regime <b>amministrato</b>) le tasse le trattiene la banca e le versa allo Stato. Tu non devi fare niente e non devi metterle nella dichiarazione dei redditi. Lo stesso per conti deposito e buoni postali.</p>
+
+    <h3>Le perdite (minusvalenze)</h3>
+    <ul>
+      <li>Se vendi in perdita, la perdita finisce nello «<b>zainetto fiscale</b>»: per i 4 anni successivi puoi usarla per non pagare tasse su futuri guadagni da compravendita.</li>
+      <li>Le perdite si compensano solo con le <b>plusvalenze</b> (guadagni da vendita di BTP, azioni, ecc.). <b>Non</b> si compensano con cedole, interessi e dividendi.</li>
+      <li>Attenzione con gli ETF: i <b>guadagni</b> degli ETF non si possono compensare con lo zainetto, mentre le <b>perdite</b> degli ETF ci entrano.</li>
+      <li>Una perdita su un titolo di Stato entra nello zainetto solo per il 48,08%, perché anche il guadagno sarebbe stato tassato meno.</li>
+    </ul>
+    <p class="sub">La pagina del confronto per semplicità non usa lo zainetto: le perdite non riducono le tasse.</p>
+  </section>
+
+  <section id="bollo">
+    <h2>4. Il bollo</h2>
+    <p>Un'imposta dello Stato sul <b>patrimonio</b>, non sul guadagno: la paghi anche se l'investimento non ha reso nulla. Nessun broker la evita.</p>
+    <div class="tw"><table>
+      <tr><th>Dove sono i soldi</th><th>Quanto</th></tr>
+      <tr><td>Conto titoli (BOT, BTP, ETF, azioni)</td><td><b>0,20% l'anno</b> sul valore di mercato, calcolato in proporzione ai giorni; addebitato di solito ogni 3 mesi o una volta l'anno</td></tr>
+      <tr><td>Conto deposito</td><td><b>0,20% l'anno</b> sul saldo; alcune banche lo pagano al posto tuo come promozione</td></tr>
+      <tr><td>Buoni fruttiferi postali</td><td><b>esenti</b> se il valore complessivo di tutti i tuoi buoni è fino a 5.000 €; oltre, 0,20% l'anno su tutto, pagato al rimborso</td></tr>
+      <tr><td>Conto corrente e libretto postale</td><td><b>34,20 € l'anno</b> fissi, solo se la giacenza media supera 5.000 €</td></tr>
+      <tr><td>Investimenti tenuti all'estero (broker stranieri)</td><td>IVAFE, 0,20% l'anno: stessa cifra, ma la dichiari tu</td></tr>
+    </table></div>
+    <div class="ex"><b>Esempio: quanto pesa</b>
+      10.000 € in BTP per 5 anni: 20 € l'anno × 5 = circa <b>100 € di bollo</b>.<br>
+      Con un BTP al 3,9% lordo, il bollo si mangia circa 0,20 punti l'anno: è il costo più grande, molto più delle commissioni.<br>
+      Con 50.000 € sono 100 € l'anno, con 500.000 € sono 1.000 € l'anno.</div>
+    <p>Per le persone fisiche non c'è un massimo. Il bollo pesa di più sui rendimenti bassi: su un BOT che rende il 2,7% lordo, lo 0,20% è quasi un decimo del guadagno netto.</p>
+  </section>
+
+  <section id="commissioni">
+    <h2>5. Commissioni e altri costi</h2>
+    <h3>Commissioni di compravendita</h3>
+    <p>Le paghi al broker ogni volta che <b>compri o vendi</b>. Le forme più comuni:</p>
+    <ul>
+      <li><b>Percentuale con minimo e massimo</b>: es. 0,19% con minimo 2,95 € e massimo 19 €. Su 1.000 € paghi 2,95 €, su 5.000 € paghi 9,50 €, da 10.000 € in su sempre 19 €.</li>
+      <li><b>Fissa</b>: es. 1,50 € a operazione, qualunque importo.</li>
+      <li><b>Banche tradizionali</b>: spesso 0,50–0,70% con minimi di 10–15 €: su piccoli importi possono mangiarsi buona parte del guadagno.</li>
+    </ul>
+    <p>Se tieni un titolo fino a scadenza paghi la commissione <b>una volta sola</b>: il rimborso è gratis. Se rinnovi BOT da 3 mesi per 5 anni, la paghi 20 volte.</p>
+
+    <h3>BOT e BTP comprati all'asta</h3>
+    <p>Per i BOT comprati all'asta la legge mette un tetto alla commissione, in base alla durata:</p>
+    <div class="tw"><table>
+      <tr><th>Durata del BOT</th><th class="n">Commissione massima</th><th class="n">Su 10.000 €</th></tr>
+      <tr><td>fino a 80 giorni</td><td class="n">0,03%</td><td class="n">3 €</td></tr>
+      <tr><td>da 81 a 140 giorni (3 mesi)</td><td class="n">0,05%</td><td class="n">5 €</td></tr>
+      <tr><td>da 141 a 270 giorni (6 mesi)</td><td class="n">0,10%</td><td class="n">10 €</td></tr>
+      <tr><td>oltre 270 giorni (12 mesi)</td><td class="n">0,15%</td><td class="n">15 €</td></tr>
+    </table></div>
+    <p>BTP Valore, BTP Italia e BTP Più durante il collocamento non hanno commissioni.</p>
+
+    <h3>Costi meno visibili</h3>
+    <ul>
+      <li><b>Canone del conto titoli</b>: molti broker online non lo fanno pagare; alcune banche chiedono 20–100 € l'anno. Nella pagina è il campo «Spese fisse conto titoli».</li>
+      <li><b>Differenza tra prezzo di acquisto e di vendita</b> (spread denaro-lettera): sul MOT compri a un prezzo un po' più alto di quello a cui potresti vendere subito. Sui BTP molto scambiati è minima (0,01–0,05), sui titoli poco scambiati può essere di più. Conviene usare ordini «con limite di prezzo».</li>
+      <li><b>Rateo</b>: se compri un BTP tra una cedola e l'altra, paghi al venditore la parte di cedola già maturata. Non è un costo: te la restituisce la cedola successiva, e anche le tasse su quella parte vengono compensate.</li>
+      <li><b>TER degli ETF</b>: il costo annuo del fondo, già tolto dal prezzo. 0,05–0,30% per gli ETF più diffusi.</li>
+    </ul>
+  </section>
+
+  <section id="inflazione">
+    <h2>6. Inflazione e rendimento reale</h2>
+    <p>L'inflazione è quanto aumentano i prezzi in un anno. Se è al 2,6%, una spesa che oggi costa 100 € fra un anno costa 102,60 €.</p>
+    <p>Il <b>rendimento reale</b> è il rendimento netto meno l'inflazione: ti dice se con i soldi che avrai alla fine potrai comprare più o meno cose di oggi.</p>
+    <div class="ex"><b>Esempio</b>
+      BTP: 3,06% netto all'anno, inflazione 2,6% → <b>+0,44% reale all'anno</b>: il potere d'acquisto cresce un po' ogni anno. Su 5 anni, gli 11.624 € finali valgono come circa 10.220 € di oggi.<br>
+      BOT 12 mesi: 2,42% netto, inflazione 2,6% → <b>−0,18% reale all'anno</b>: in tasca hai più euro, ma ogni anno ci compri un po' meno.<br>
+      Soldi fermi sul conto: 0% netto → <b>−2,6% reale all'anno</b>: ogni anno ci compri il 2,6% in meno; in 5 anni circa il 12% in meno.</div>
+    <p>Quale inflazione usare? Nessuno la conosce in anticipo. La pagina propone la media degli ultimi 12 mesi e mostra anche quella «implicita nei BTP», cioè quella che il mercato si aspetta: è la differenza tra il rendimento di un BTP normale e quello di un BTP€i con scadenza simile. Ad ottobre 2026 l'inflazione è salita al 5,6% per i prezzi dell'energia: un picco, non necessariamente la media dei prossimi anni.</p>
+  </section>
+
+  <section id="reinvestire">
+    <h2>7. Reinvestire o incassare</h2>
+    <p><b>Reinvestire</b> vuol dire usare cedole e interessi per comprare altri titoli, così rendono a loro volta: è l'<b>interesse composto</b>, l'interesse sugli interessi.</p>
+    <div class="ex"><b>Esempio: perché in pochi anni conta poco</b>
+      10.000 € al 3% netto danno 300 € l'anno. Reinvestendoli guadagni il 3% di 300 €, cioè 9 € il primo anno, poi un po' di più ogni anno.<br>
+      In 5 anni la differenza è di qualche decina di euro, in 20 anni di migliaia: con il BTP della pagina, +76 € in 5 anni e +3.348 € in 20 anni.</div>
+    <ul>
+      <li><b>BOT</b>: non ci sono cedole, il guadagno arriva alla scadenza. Su un BOT 12 mesi tenuto un anno non c'è niente da reinvestire. Si reinveste al rinnovo, ricomprando un BOT con capitale più guadagno.</li>
+      <li><b>BTP</b>: le cedole arrivano ogni 6 mesi, ma i titoli si comprano a lotti da 1.000 €. Con cedole piccole devi aspettare che si accumulino abbastanza soldi, e ogni acquisto paga la commissione.</li>
+      <li><b>Buoni postali</b>: si reinvestono da soli, gli interessi sono già composti dentro il buono.</li>
+      <li><b>Conti deposito</b>: di solito gli interessi restano sul conto e rendono anche loro.</li>
+      <li><b>ETF</b>: scegli un ETF ad accumulazione e il reinvestimento lo fa il fondo, senza commissioni e rinviando le tasse alla vendita.</li>
+    </ul>
+  </section>
+
+  <section id="rischi">
+    <h2>8. Garanzie e rischi</h2>
+    <div class="tw"><table>
+      <tr><th>Strumento</th><th>Chi garantisce</th><th>Cosa può andare storto</th></tr>
+      <tr><td>BOT, BTP</td><td>lo Stato italiano</td><td>solo un default dell'Italia; se vendi prima della scadenza, il prezzo può essere più basso</td></tr>
+      <tr><td>Buoni postali</td><td>lo Stato, tramite CDP</td><td>praticamente nulla; se chiudi tra una tappa e l'altra perdi gli interessi</td></tr>
+      <tr><td>Conto deposito</td><td>Fondo Interbancario, fino a 100.000 € per persona e per banca</td><td>sopra i 100.000 € nella stessa banca, il fallimento della banca</td></tr>
+      <tr><td>ETF titoli di Stato</td><td>nessuna garanzia sul prezzo; il patrimonio del fondo è separato da quello di chi lo gestisce</td><td>il prezzo scende se i tassi salgono, e non c'è una scadenza a cui tornare a 100</td></tr>
+      <tr><td>ETF azionario</td><td>nessuna</td><td>cali del 20–40% in un anno; servono anni per recuperare</td></tr>
+    </table></div>
+    <div class="warn"><b>Rischio tasso:</b> se compri un BTP a 10 anni e dopo un anno i tassi salgono di un punto, il suo prezzo scende di circa il 7–8%. Se lo tieni fino a scadenza non perdi nulla, ma se ti servono i soldi prima sì. Per questo conviene scegliere una scadenza vicina a quando ti serviranno i soldi.</div>
+  </section>
+
+  <section id="vantaggi">
+    <h2>9. Vantaggi nascosti dei titoli di Stato</h2>
+    <ul>
+      <li><b>Tasse al 12,5%</b> invece del 26%.</li>
+      <li><b>ISEE</b>: titoli di Stato, buoni e libretti postali fino a 50.000 € complessivi non contano nel patrimonio per l'ISEE.</li>
+      <li><b>Successione</b>: titoli di Stato e buoni postali non pagano l'imposta di successione e non entrano nel calcolo della franchigia.</li>
+      <li>Si comprano da qualunque banca o broker e si vendono in ogni giorno di Borsa.</li>
+    </ul>
+  </section>
+
+  <section id="esempio">
+    <h2>10. Un esempio completo</h2>
+    <p>10.000 € in BOT 12 mesi all'asta dell'11/11/2026, broker online (0,19%, min 2,95 €, max 19 €):</p>
+    <div class="tw"><table>
+      <tr><th>Voce</th><th class="n">Euro</th></tr>
+      <tr><td>Nominale comprato (10 lotti da 1.000 €)</td><td class="n">10.000,00</td></tr>
+      <tr><td>Prezzo pagato (96,859)</td><td class="n">−9.685,90</td></tr>
+      <tr><td>Commissione: 0,19% sarebbe 18,40 €, ma all'asta il tetto è 0,15%</td><td class="n">−14,53</td></tr>
+      <tr><td>Bollo 0,20% per un anno</td><td class="n">−19,70</td></tr>
+      <tr><td>Rimborso alla scadenza</td><td class="n">+10.000,00</td></tr>
+      <tr><td>Guadagno lordo (10.000 − 9.685,90)</td><td class="n">314,10</td></tr>
+      <tr><td>Tasse 12,5% sul guadagno</td><td class="n">−39,26</td></tr>
+      <tr><td><b>Guadagno netto</b> (314,10 − 39,26 − 14,53 − 19,70)</td><td class="n"><b>240,61</b></td></tr>
+    </table></div>
+    <p>Sui 9.686 € usati è circa il <b>2,5% netto</b>, contro il 3,2% lordo pubblicizzato. La differenza: 0,4 punti di tasse, 0,2 di bollo, 0,15 di commissione.</p>
+  </section>
+
+  <section id="pagina">
+    <h2>11. Come leggere la pagina del confronto</h2>
+    <dl>
+      <dt>Valore finale netto</dt><dd>Quanto avresti in tasca alla fine, dopo tasse, bollo, commissioni ed eventuale vendita.</dd>
+      <dt>Guadagno netto</dt><dd>Valore finale meno quanto hai investito.</dd>
+      <dt>Netto all'anno</dt><dd>Il guadagno netto trasformato in una percentuale all'anno, così puoi confrontare durate diverse.</dd>
+      <dt>Netto meno inflazione, all'anno</dt><dd>Il netto all'anno meno l'inflazione impostata. È una percentuale all'anno, non sul totale. Verde: ogni anno il tuo potere d'acquisto cresce un po'. Rosso: ogni anno cala un po'. Sopra la tabella trovi anche il dato sul totale: quanto varranno in euro di oggi i soldi che avrai alla fine.</dd>
+      <dt>Tasse e Costi</dt><dd>Totale pagato in tutta la durata; sotto i costi c'è il dettaglio tra bollo, commissioni e spese del conto.</dd>
+      <dt>Reinvestire vale</dt><dd>Quanti euro in più ottieni scegliendo «Reinvesti» invece di «Incassa».</dd>
+      <dt>Le ipotesi</dt><dd>La pagina tiene i tassi di oggi costanti per tutta la durata: i rinnovi di BOT, vincoli e buoni avvengono agli stessi tassi. Nella realtà potranno essere più alti o più bassi.</dd>
+    </dl>
+  </section>
+
+  <section id="glossario">
+    <h2>12. Glossario veloce</h2>
+    <dl>
+      <dt>Asta</dt><dd>Il modo in cui il Tesoro vende i nuovi titoli; prenoti dalla banca o dal broker nei giorni prima.</dd>
+      <dt>MOT</dt><dd>Il mercato di Borsa Italiana dove si comprano e vendono BOT e BTP già emessi.</dd>
+      <dt>Lotto minimo</dt><dd>La quantità minima acquistabile: 1.000 € di nominale per BOT e BTP.</dd>
+      <dt>Scarto di emissione</dt><dd>La differenza tra 100 e il prezzo d'asta: è il guadagno dei BOT.</dd>
+      <dt>Plusvalenza e minusvalenza</dt><dd>Guadagno o perdita quando vendi a un prezzo diverso da quello di acquisto.</dd>
+      <dt>Zainetto fiscale</dt><dd>Le perdite degli ultimi 4 anni, usabili per non pagare tasse su futuri guadagni da vendita.</dd>
+      <dt>Regime amministrato</dt><dd>La banca fa da sostituto d'imposta: trattiene e versa le tasse per te.</dd>
+      <dt>White list</dt><dd>L'elenco dei paesi i cui titoli di Stato sono tassati al 12,5% come i BTP.</dd>
+      <dt>TER</dt><dd>Costo annuo di un fondo o ETF, in percentuale.</dd>
+      <dt>Spread BTP-Bund</dt><dd>Quanto rende in più un BTP a 10 anni rispetto al titolo tedesco equivalente: misura quanto il mercato considera rischiosa l'Italia.</dd>
+      <dt>FITD</dt><dd>Fondo Interbancario di Tutela dei Depositi: rimborsa fino a 100.000 € per depositante se una banca fallisce.</dd>
+    </dl>
+  </section>
+
+  <footer>Questa guida spiega le regole generali e non è una consulenza finanziaria o fiscale. Le norme cambiano: verifica sempre con la tua banca, i fogli informativi o un consulente.</footer>
+</main>
+<script>
+try { const t = localStorage.getItem('investimenti-benchmark-v1-tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+document.getElementById('tema').onclick = () => {
+  const scuro = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = scuro ? 'light' : 'dark';
+  try { localStorage.setItem('investimenti-benchmark-v1-tema', document.documentElement.dataset.theme); } catch (e) {}
+};
+</script>
+</body>
+</html>
