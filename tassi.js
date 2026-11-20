@@ -80,12 +80,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2026-11-30",
    "cedola": 0.0,
-   "prezzo": 99.93,
-   "ytm_lordo": 2.66,
-   "ytm_netto": 2.33,
+   "prezzo": 99.95,
+   "ytm_lordo": 2.7,
+   "ytm_netto": 2.35,
    "lotto": 1000,
-   "volume_mln": 2.173,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.092,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005684888",
@@ -93,12 +93,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2026-12-14",
    "cedola": 0.0,
-   "prezzo": 99.83,
-   "ytm_lordo": 2.56,
-   "ytm_netto": 2.23,
+   "prezzo": 99.86,
+   "ytm_lordo": 2.52,
+   "ytm_netto": 2.2,
    "lotto": 1000,
-   "volume_mln": 3.201,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.113,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005719536",
@@ -106,12 +106,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2026-12-31",
    "cedola": 0.0,
-   "prezzo": 99.71,
-   "ytm_lordo": 2.62,
-   "ytm_netto": 2.29,
+   "prezzo": 99.73,
+   "ytm_lordo": 2.61,
+   "ytm_netto": 2.28,
    "lotto": 1000,
-   "volume_mln": 0.909,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.386,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005689887",
@@ -119,12 +119,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-01-14",
    "cedola": 0.0,
-   "prezzo": 99.61,
-   "ytm_lordo": 2.66,
-   "ytm_netto": 2.32,
+   "prezzo": 99.63,
+   "ytm_lordo": 2.63,
+   "ytm_netto": 2.3,
    "lotto": 1000,
-   "volume_mln": 5.741,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.887,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005725236",
@@ -132,12 +132,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-01-29",
    "cedola": 0.0,
-   "prezzo": 99.47,
-   "ytm_lordo": 2.82,
-   "ytm_netto": 2.46,
+   "prezzo": 99.5,
+   "ytm_lordo": 2.79,
+   "ytm_netto": 2.43,
    "lotto": 1000,
-   "volume_mln": 0.275,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.173,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005695256",
@@ -145,12 +145,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-02-12",
    "cedola": 0.0,
-   "prezzo": 99.38,
+   "prezzo": 99.4,
    "ytm_lordo": 2.76,
    "ytm_netto": 2.41,
    "lotto": 1000,
-   "volume_mln": 13.952,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.116,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005699340",
@@ -158,12 +158,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-03-12",
    "cedola": 0.0,
-   "prezzo": 99.13,
-   "ytm_lordo": 2.88,
-   "ytm_netto": 2.51,
+   "prezzo": 99.16,
+   "ytm_lordo": 2.86,
+   "ytm_netto": 2.5,
    "lotto": 1000,
-   "volume_mln": 16.822,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.968,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005733115",
@@ -171,12 +171,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-03-31",
    "cedola": 0.0,
-   "prezzo": 98.98,
-   "ytm_lordo": 2.91,
-   "ytm_netto": 2.54,
+   "prezzo": 99.0,
+   "ytm_lordo": 2.92,
+   "ytm_netto": 2.55,
    "lotto": 1000,
-   "volume_mln": 1.273,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.192,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005704447",
@@ -184,12 +184,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-04-14",
    "cedola": 0.0,
-   "prezzo": 98.87,
-   "ytm_lordo": 2.89,
-   "ytm_netto": 2.52,
+   "prezzo": 98.89,
+   "ytm_lordo": 2.9,
+   "ytm_netto": 2.53,
    "lotto": 1000,
-   "volume_mln": 7.507,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.991,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005709289",
@@ -197,12 +197,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-05-14",
    "cedola": 0.0,
-   "prezzo": 98.62,
-   "ytm_lordo": 2.95,
-   "ytm_netto": 2.57,
+   "prezzo": 98.64,
+   "ytm_lordo": 2.96,
+   "ytm_netto": 2.58,
    "lotto": 1000,
-   "volume_mln": 3.537,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.212,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005716714",
@@ -210,12 +210,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-06-14",
    "cedola": 0.0,
-   "prezzo": 98.34,
+   "prezzo": 98.36,
    "ytm_lordo": 3.02,
-   "ytm_netto": 2.64,
+   "ytm_netto": 2.63,
    "lotto": 1000,
-   "volume_mln": 1.416,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 7.792,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005722514",
@@ -223,12 +223,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-07-14",
    "cedola": 0.0,
-   "prezzo": 98.2,
-   "ytm_lordo": 2.85,
-   "ytm_netto": 2.49,
+   "prezzo": 98.06,
+   "ytm_lordo": 3.12,
+   "ytm_netto": 2.72,
    "lotto": 1000,
-   "volume_mln": 1.339,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.195,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005729220",
@@ -236,12 +236,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-08-13",
    "cedola": 0.0,
-   "prezzo": 97.75,
+   "prezzo": 97.78,
    "ytm_lordo": 3.17,
    "ytm_netto": 2.76,
    "lotto": 1000,
-   "volume_mln": 0.963,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.662,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005730681",
@@ -249,12 +249,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-09-14",
    "cedola": 0.0,
-   "prezzo": 97.52,
-   "ytm_lordo": 3.13,
-   "ytm_netto": 2.73,
+   "prezzo": 97.51,
+   "ytm_lordo": 3.17,
+   "ytm_netto": 2.76,
    "lotto": 1000,
-   "volume_mln": 7.595,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.322,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005735094",
@@ -262,12 +262,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-10-14",
    "cedola": 0.0,
-   "prezzo": 97.19,
-   "ytm_lordo": 3.22,
-   "ytm_netto": 2.8,
+   "prezzo": 97.2,
+   "ytm_lordo": 3.24,
+   "ytm_netto": 2.83,
    "lotto": 1000,
-   "volume_mln": 57.873,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 13.027,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005744930",
@@ -275,12 +275,12 @@ window.TASSI = {
    "tipo": "BOT",
    "scadenza": "2027-11-12",
    "cedola": 0.0,
-   "prezzo": 96.92,
-   "ytm_lordo": 3.25,
-   "ytm_netto": 2.84,
+   "prezzo": 96.91,
+   "ytm_lordo": 3.28,
+   "ytm_netto": 2.86,
    "lotto": 1000,
-   "volume_mln": 37.114,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 30.639,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005210650",
@@ -288,12 +288,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2026-12-01",
    "cedola": 1.25,
-   "prezzo": 99.97,
-   "ytm_lordo": 2.32,
-   "ytm_netto": 2.03,
+   "prezzo": 99.98,
+   "ytm_lordo": 2.35,
+   "ytm_netto": 2.06,
    "lotto": 1000,
-   "volume_mln": 10.361,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.058,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005390874",
@@ -301,12 +301,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-01-15",
    "cedola": 0.85,
-   "prezzo": 99.73,
+   "prezzo": 99.74,
    "ytm_lordo": 2.63,
    "ytm_netto": 2.3,
    "lotto": 1000,
-   "volume_mln": 1.2,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.306,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005580045",
@@ -318,8 +318,8 @@ window.TASSI = {
    "ytm_lordo": 2.85,
    "ytm_netto": 2.48,
    "lotto": 1000,
-   "volume_mln": 2.158,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.864,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005633794",
@@ -327,12 +327,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-02-25",
    "cedola": 2.55,
-   "prezzo": 99.91,
-   "ytm_lordo": 2.87,
-   "ytm_netto": 2.51,
+   "prezzo": 99.92,
+   "ytm_lordo": 2.86,
+   "ytm_netto": 2.5,
    "lotto": 1000,
-   "volume_mln": 3.353,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.958,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005484552",
@@ -340,12 +340,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-04-01",
    "cedola": 1.1,
-   "prezzo": 99.34,
-   "ytm_lordo": 2.96,
-   "ytm_netto": 2.59,
+   "prezzo": 99.35,
+   "ytm_lordo": 2.99,
+   "ytm_netto": 2.62,
    "lotto": 1000,
-   "volume_mln": 4.803,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.907,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005240830",
@@ -353,12 +353,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-06-01",
    "cedola": 2.2,
-   "prezzo": 99.57,
-   "ytm_lordo": 3.06,
-   "ytm_netto": 2.68,
+   "prezzo": 99.56,
+   "ytm_lordo": 3.08,
+   "ytm_netto": 2.7,
    "lotto": 1000,
-   "volume_mln": 1.696,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.522,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005599904",
@@ -366,12 +366,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-07-15",
    "cedola": 3.45,
-   "prezzo": 100.3,
-   "ytm_lordo": 3.01,
-   "ytm_netto": 2.58,
+   "prezzo": 100.2,
+   "ytm_lordo": 3.16,
+   "ytm_netto": 2.73,
    "lotto": 1000,
-   "volume_mln": 0.552,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.966,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005274805",
@@ -380,11 +380,11 @@ window.TASSI = {
    "scadenza": "2027-08-01",
    "cedola": 2.05,
    "prezzo": 99.28,
-   "ytm_lordo": 3.13,
-   "ytm_netto": 2.74,
+   "ytm_lordo": 3.15,
+   "ytm_netto": 2.75,
    "lotto": 1000,
-   "volume_mln": 0.733,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.982,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005657330",
@@ -392,12 +392,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-08-26",
    "cedola": 2.1,
-   "prezzo": 99.22,
-   "ytm_lordo": 3.17,
-   "ytm_netto": 2.78,
+   "prezzo": 99.21,
+   "ytm_lordo": 3.19,
+   "ytm_netto": 2.79,
    "lotto": 1000,
-   "volume_mln": 0.7,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.696,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005416570",
@@ -405,12 +405,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-09-15",
    "cedola": 0.95,
-   "prezzo": 98.31,
-   "ytm_lordo": 3.08,
-   "ytm_netto": 2.69,
+   "prezzo": 98.3,
+   "ytm_lordo": 3.11,
+   "ytm_netto": 2.72,
    "lotto": 1000,
-   "volume_mln": 9.676,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 10.522,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005622128",
@@ -418,12 +418,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-10-15",
    "cedola": 2.7,
-   "prezzo": 99.54,
-   "ytm_lordo": 3.25,
-   "ytm_netto": 2.84,
+   "prezzo": 99.57,
+   "ytm_lordo": 3.22,
+   "ytm_netto": 2.82,
    "lotto": 1000,
-   "volume_mln": 4.345,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 7.096,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0001174611",
@@ -431,12 +431,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-11-01",
    "cedola": 6.5,
-   "prezzo": 103.01,
-   "ytm_lordo": 3.28,
-   "ytm_netto": 2.47,
+   "prezzo": 102.97,
+   "ytm_lordo": 3.29,
+   "ytm_netto": 2.48,
    "lotto": 1000,
-   "volume_mln": 1.299,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 28.922,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005500068",
@@ -444,12 +444,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2027-12-01",
    "cedola": 2.65,
-   "prezzo": 99.48,
-   "ytm_lordo": 3.19,
-   "ytm_netto": 2.79,
+   "prezzo": 99.39,
+   "ytm_lordo": 3.29,
+   "ytm_netto": 2.88,
    "lotto": 1000,
-   "volume_mln": 4.974,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.049,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005323032",
@@ -457,12 +457,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-02-01",
    "cedola": 2.0,
-   "prezzo": 98.52,
-   "ytm_lordo": 3.29,
-   "ytm_netto": 2.88,
+   "prezzo": 98.49,
+   "ytm_lordo": 3.33,
+   "ytm_netto": 2.91,
    "lotto": 1000,
-   "volume_mln": 1.674,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.218,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005692410",
@@ -471,11 +471,11 @@ window.TASSI = {
    "scadenza": "2028-02-28",
    "cedola": 2.2,
    "prezzo": 98.58,
-   "ytm_lordo": 3.37,
-   "ytm_netto": 2.95,
+   "ytm_lordo": 3.38,
+   "ytm_netto": 2.96,
    "lotto": 1000,
-   "volume_mln": 0.278,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.351,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005433690",
@@ -483,12 +483,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-03-15",
    "cedola": 0.25,
-   "prezzo": 96.15,
-   "ytm_lordo": 3.29,
-   "ytm_netto": 2.88,
+   "prezzo": 96.13,
+   "ytm_lordo": 3.32,
+   "ytm_netto": 2.91,
    "lotto": 1000,
-   "volume_mln": 4.089,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.36,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005521981",
@@ -496,12 +496,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-04-01",
    "cedola": 3.4,
-   "prezzo": 100.1,
-   "ytm_lordo": 3.35,
-   "ytm_netto": 2.9,
+   "prezzo": 100.06,
+   "ytm_lordo": 3.38,
+   "ytm_netto": 2.93,
    "lotto": 1000,
-   "volume_mln": 2.223,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.424,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005641029",
@@ -509,12 +509,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-06-15",
    "cedola": 2.65,
-   "prezzo": 99.03,
-   "ytm_lordo": 3.32,
-   "ytm_netto": 2.9,
+   "prezzo": 98.85,
+   "ytm_lordo": 3.44,
+   "ytm_netto": 3.01,
    "lotto": 1000,
-   "volume_mln": 5.916,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 11.028,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005445306",
@@ -522,12 +522,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-07-15",
    "cedola": 0.5,
-   "prezzo": 95.49,
-   "ytm_lordo": 3.36,
-   "ytm_netto": 2.95,
+   "prezzo": 95.48,
+   "ytm_lordo": 3.38,
+   "ytm_netto": 2.96,
    "lotto": 1000,
-   "volume_mln": 6.425,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 8.632,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005548315",
@@ -535,12 +535,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-08-01",
    "cedola": 3.8,
-   "prezzo": 100.64,
-   "ytm_lordo": 3.44,
-   "ytm_netto": 2.96,
+   "prezzo": 100.6,
+   "ytm_lordo": 3.46,
+   "ytm_netto": 2.98,
    "lotto": 1000,
-   "volume_mln": 12.646,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.968,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0004889033",
@@ -548,12 +548,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-09-01",
    "cedola": 4.75,
-   "prezzo": 102.25,
+   "prezzo": 102.24,
    "ytm_lordo": 3.46,
    "ytm_netto": 2.86,
    "lotto": 1000,
-   "volume_mln": 1.677,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.148,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005729733",
@@ -561,12 +561,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-10-30",
    "cedola": 3.0,
-   "prezzo": 99.16,
-   "ytm_lordo": 3.48,
-   "ytm_netto": 3.04,
+   "prezzo": 99.06,
+   "ytm_lordo": 3.54,
+   "ytm_netto": 3.09,
    "lotto": 1000,
-   "volume_mln": 11.067,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 12.311,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005340929",
@@ -574,12 +574,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2028-12-01",
    "cedola": 2.8,
-   "prezzo": 98.77,
-   "ytm_lordo": 3.46,
-   "ytm_netto": 3.03,
+   "prezzo": 98.75,
+   "ytm_lordo": 3.47,
+   "ytm_netto": 3.04,
    "lotto": 1000,
-   "volume_mln": 6.767,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 14.513,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005660052",
@@ -587,12 +587,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-01-15",
    "cedola": 2.35,
-   "prezzo": 97.72,
-   "ytm_lordo": 3.49,
-   "ytm_netto": 3.05,
+   "prezzo": 97.57,
+   "ytm_lordo": 3.57,
+   "ytm_netto": 3.12,
    "lotto": 1000,
-   "volume_mln": 5.804,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.969,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005566408",
@@ -600,12 +600,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-02-01",
    "cedola": 4.1,
-   "prezzo": 101.21,
-   "ytm_lordo": 3.55,
-   "ytm_netto": 3.01,
+   "prezzo": 101.14,
+   "ytm_lordo": 3.58,
+   "ytm_netto": 3.04,
    "lotto": 1000,
-   "volume_mln": 7.136,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 18.322,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005467482",
@@ -613,12 +613,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-02-15",
    "cedola": 0.45,
-   "prezzo": 93.58,
-   "ytm_lordo": 3.48,
-   "ytm_netto": 3.06,
+   "prezzo": 93.54,
+   "ytm_lordo": 3.52,
+   "ytm_netto": 3.09,
    "lotto": 1000,
-   "volume_mln": 4.183,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 9.927,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005689960",
@@ -626,12 +626,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-03-15",
    "cedola": 2.4,
-   "prezzo": 97.52,
-   "ytm_lordo": 3.56,
-   "ytm_netto": 3.11,
+   "prezzo": 97.45,
+   "ytm_lordo": 3.59,
+   "ytm_netto": 3.15,
    "lotto": 1000,
-   "volume_mln": 5.979,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.357,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005495731",
@@ -639,12 +639,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-06-15",
    "cedola": 2.8,
-   "prezzo": 99.0,
-   "ytm_lordo": 3.24,
-   "ytm_netto": 2.83,
+   "prezzo": 98.11,
+   "ytm_lordo": 3.61,
+   "ytm_netto": 3.16,
    "lotto": 1000,
-   "volume_mln": 6.4,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.919,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005584849",
@@ -652,12 +652,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-07-01",
    "cedola": 3.35,
-   "prezzo": 99.4,
-   "ytm_lordo": 3.63,
-   "ytm_netto": 3.17,
+   "prezzo": 99.34,
+   "ytm_lordo": 3.65,
+   "ytm_netto": 3.2,
    "lotto": 1000,
-   "volume_mln": 4.378,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.002,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005365165",
@@ -665,12 +665,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-08-01",
    "cedola": 3.0,
-   "prezzo": 98.62,
-   "ytm_lordo": 3.57,
-   "ytm_netto": 3.13,
+   "prezzo": 98.53,
+   "ytm_lordo": 3.61,
+   "ytm_netto": 3.16,
    "lotto": 1000,
-   "volume_mln": 2.985,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.186,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005716839",
@@ -678,12 +678,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-09-15",
    "cedola": 3.0,
-   "prezzo": 98.31,
-   "ytm_lordo": 3.67,
-   "ytm_netto": 3.21,
+   "prezzo": 98.24,
+   "ytm_lordo": 3.7,
+   "ytm_netto": 3.23,
    "lotto": 1000,
-   "volume_mln": 5.068,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.599,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005611055",
@@ -691,12 +691,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-10-01",
    "cedola": 3.0,
-   "prezzo": 98.35,
-   "ytm_lordo": 3.64,
-   "ytm_netto": 3.19,
+   "prezzo": 98.24,
+   "ytm_lordo": 3.69,
+   "ytm_netto": 3.23,
    "lotto": 1000,
-   "volume_mln": 3.915,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.625,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0001278511",
@@ -704,12 +704,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-11-01",
    "cedola": 5.25,
-   "prezzo": 104.56,
-   "ytm_lordo": 3.64,
-   "ytm_netto": 2.99,
+   "prezzo": 104.5,
+   "ytm_lordo": 3.65,
+   "ytm_netto": 3.0,
    "lotto": 1000,
-   "volume_mln": 2.445,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.703,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005519787",
@@ -717,12 +717,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2029-12-15",
    "cedola": 3.85,
-   "prezzo": 100.52,
-   "ytm_lordo": 3.7,
-   "ytm_netto": 3.21,
+   "prezzo": 100.46,
+   "ytm_lordo": 3.72,
+   "ytm_netto": 3.23,
    "lotto": 1000,
-   "volume_mln": 8.815,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.006,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005024234",
@@ -730,12 +730,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-03-01",
    "cedola": 3.5,
-   "prezzo": 99.57,
-   "ytm_lordo": 3.67,
-   "ytm_netto": 3.21,
+   "prezzo": 99.47,
+   "ytm_lordo": 3.71,
+   "ytm_netto": 3.24,
    "lotto": 1000,
-   "volume_mln": 7.388,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 7.317,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005383309",
@@ -743,12 +743,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-04-01",
    "cedola": 1.35,
-   "prezzo": 92.8,
-   "ytm_lordo": 3.68,
-   "ytm_netto": 3.23,
+   "prezzo": 92.72,
+   "ytm_lordo": 3.71,
+   "ytm_netto": 3.26,
    "lotto": 1000,
-   "volume_mln": 6.546,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.616,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005542797",
@@ -756,12 +756,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-06-15",
    "cedola": 3.7,
-   "prezzo": 99.9,
-   "ytm_lordo": 3.77,
-   "ytm_netto": 3.27,
+   "prezzo": 99.83,
+   "ytm_lordo": 3.79,
+   "ytm_netto": 3.29,
    "lotto": 1000,
-   "volume_mln": 7.427,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.739,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005637399",
@@ -769,12 +769,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-07-01",
    "cedola": 2.95,
-   "prezzo": 97.35,
-   "ytm_lordo": 3.78,
-   "ytm_netto": 3.31,
+   "prezzo": 97.31,
+   "ytm_lordo": 3.79,
+   "ytm_netto": 3.32,
    "lotto": 1000,
-   "volume_mln": 2.223,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.288,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005403396",
@@ -782,12 +782,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-08-01",
    "cedola": 0.95,
-   "prezzo": 90.57,
-   "ytm_lordo": 3.74,
-   "ytm_netto": 3.29,
+   "prezzo": 90.42,
+   "ytm_lordo": 3.79,
+   "ytm_netto": 3.33,
    "lotto": 1000,
-   "volume_mln": 4.661,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.389,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005654642",
@@ -795,12 +795,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-10-01",
    "cedola": 2.7,
-   "prezzo": 96.17,
-   "ytm_lordo": 3.81,
-   "ytm_netto": 3.34,
+   "prezzo": 96.13,
+   "ytm_lordo": 3.82,
+   "ytm_netto": 3.35,
    "lotto": 1000,
-   "volume_mln": 3.766,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.604,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005561888",
@@ -808,12 +808,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-11-15",
    "cedola": 4.0,
-   "prezzo": 100.81,
-   "ytm_lordo": 3.81,
-   "ytm_netto": 3.29,
+   "prezzo": 100.7,
+   "ytm_lordo": 3.84,
+   "ytm_netto": 3.32,
    "lotto": 1000,
-   "volume_mln": 3.082,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.506,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005413171",
@@ -821,12 +821,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2030-12-01",
    "cedola": 1.65,
-   "prezzo": 92.18,
-   "ytm_lordo": 3.79,
-   "ytm_netto": 3.33,
+   "prezzo": 92.12,
+   "ytm_lordo": 3.82,
+   "ytm_netto": 3.35,
    "lotto": 1000,
-   "volume_mln": 1.665,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.571,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005671273",
@@ -834,12 +834,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-02-01",
    "cedola": 2.85,
-   "prezzo": 96.27,
-   "ytm_lordo": 3.85,
-   "ytm_netto": 3.38,
+   "prezzo": 96.23,
+   "ytm_lordo": 3.87,
+   "ytm_netto": 3.39,
    "lotto": 1000,
-   "volume_mln": 7.294,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.404,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005580094",
@@ -847,12 +847,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-02-15",
    "cedola": 3.5,
-   "prezzo": 98.78,
-   "ytm_lordo": 3.85,
-   "ytm_netto": 3.37,
+   "prezzo": 98.65,
+   "ytm_lordo": 3.88,
+   "ytm_netto": 3.4,
    "lotto": 1000,
-   "volume_mln": 4.149,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.392,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005422891",
@@ -860,12 +860,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-04-01",
    "cedola": 0.9,
-   "prezzo": 88.48,
-   "ytm_lordo": 3.83,
-   "ytm_netto": 3.37,
+   "prezzo": 88.36,
+   "ytm_lordo": 3.86,
+   "ytm_netto": 3.4,
    "lotto": 1000,
-   "volume_mln": 7.834,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.793,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0001444378",
@@ -873,12 +873,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-05-01",
    "cedola": 6.0,
-   "prezzo": 108.99,
-   "ytm_lordo": 3.82,
-   "ytm_netto": 3.1,
+   "prezzo": 108.8,
+   "ytm_lordo": 3.86,
+   "ytm_netto": 3.14,
    "lotto": 1000,
-   "volume_mln": 2.043,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.734,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005707614",
@@ -886,12 +886,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-06-01",
    "cedola": 3.15,
-   "prezzo": 97.1,
-   "ytm_lordo": 3.89,
-   "ytm_netto": 3.41,
+   "prezzo": 96.94,
+   "ytm_lordo": 3.93,
+   "ytm_netto": 3.44,
    "lotto": 1000,
-   "volume_mln": 2.805,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.821,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005595803",
@@ -899,12 +899,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-07-15",
    "cedola": 3.45,
-   "prezzo": 98.33,
-   "ytm_lordo": 3.88,
-   "ytm_netto": 3.4,
+   "prezzo": 98.25,
+   "ytm_lordo": 3.9,
+   "ytm_netto": 3.42,
    "lotto": 1000,
-   "volume_mln": 6.298,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.961,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005436693",
@@ -912,12 +912,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-08-01",
    "cedola": 0.6,
-   "prezzo": 86.34,
-   "ytm_lordo": 3.84,
-   "ytm_netto": 3.38,
+   "prezzo": 86.22,
+   "ytm_lordo": 3.88,
+   "ytm_netto": 3.42,
    "lotto": 1000,
-   "volume_mln": 3.252,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.285,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005542359",
@@ -925,12 +925,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-10-30",
    "cedola": 4.0,
-   "prezzo": 100.69,
-   "ytm_lordo": 3.88,
-   "ytm_netto": 3.37,
+   "prezzo": 100.62,
+   "ytm_lordo": 3.9,
+   "ytm_netto": 3.39,
    "lotto": 1000,
-   "volume_mln": 5.995,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.771,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005619546",
@@ -938,12 +938,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-11-15",
    "cedola": 3.15,
-   "prezzo": 96.7,
-   "ytm_lordo": 3.92,
-   "ytm_netto": 3.43,
+   "prezzo": 96.59,
+   "ytm_lordo": 3.95,
+   "ytm_netto": 3.46,
    "lotto": 1000,
-   "volume_mln": 7.392,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 8.756,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005449969",
@@ -951,12 +951,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2031-12-01",
    "cedola": 0.95,
-   "prezzo": 86.83,
-   "ytm_lordo": 3.89,
-   "ytm_netto": 3.43,
+   "prezzo": 86.73,
+   "ytm_lordo": 3.92,
+   "ytm_netto": 3.45,
    "lotto": 1000,
-   "volume_mln": 5.992,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.899,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005733636",
@@ -964,12 +964,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2032-02-01",
    "cedola": 3.95,
-   "prezzo": 100.08,
-   "ytm_lordo": 3.97,
-   "ytm_netto": 3.46,
+   "prezzo": 99.95,
+   "ytm_lordo": 4.0,
+   "ytm_netto": 3.49,
    "lotto": 1000,
-   "volume_mln": 7.092,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 12.962,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005094088",
@@ -977,12 +977,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2032-03-01",
    "cedola": 1.65,
-   "prezzo": 89.38,
-   "ytm_lordo": 3.93,
-   "ytm_netto": 3.46,
+   "prezzo": 89.26,
+   "ytm_lordo": 3.96,
+   "ytm_netto": 3.49,
    "lotto": 1000,
-   "volume_mln": 2.995,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.406,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005466013",
@@ -990,12 +990,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2032-06-01",
    "cedola": 0.95,
-   "prezzo": 85.41,
-   "ytm_lordo": 3.95,
-   "ytm_netto": 3.48,
+   "prezzo": 85.32,
+   "ytm_lordo": 3.97,
+   "ytm_netto": 3.5,
    "lotto": 1000,
-   "volume_mln": 2.783,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.58,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005647265",
@@ -1003,12 +1003,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2032-07-15",
    "cedola": 3.25,
-   "prezzo": 96.4,
-   "ytm_lordo": 4.01,
-   "ytm_netto": 3.51,
+   "prezzo": 96.3,
+   "ytm_lordo": 4.03,
+   "ytm_netto": 3.53,
    "lotto": 1000,
-   "volume_mln": 6.365,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.407,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005668220",
@@ -1016,12 +1016,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2032-11-15",
    "cedola": 3.25,
-   "prezzo": 95.94,
-   "ytm_lordo": 4.06,
-   "ytm_netto": 3.56,
+   "prezzo": 95.81,
+   "ytm_lordo": 4.09,
+   "ytm_netto": 3.58,
    "lotto": 1000,
-   "volume_mln": 3.052,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.262,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005494239",
@@ -1029,12 +1029,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2032-12-01",
    "cedola": 2.5,
-   "prezzo": 92.2,
-   "ytm_lordo": 4.01,
-   "ytm_netto": 3.52,
+   "prezzo": 92.0,
+   "ytm_lordo": 4.05,
+   "ytm_netto": 3.56,
    "lotto": 1000,
-   "volume_mln": 28.586,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.43,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0003256820",
@@ -1042,12 +1042,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-02-01",
    "cedola": 5.75,
-   "prezzo": 109.41,
-   "ytm_lordo": 4.06,
-   "ytm_netto": 3.36,
+   "prezzo": 109.25,
+   "ytm_lordo": 4.08,
+   "ytm_netto": 3.39,
    "lotto": 1000,
-   "volume_mln": 1.167,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.44,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005689994",
@@ -1055,12 +1055,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-03-15",
    "cedola": 3.15,
-   "prezzo": 94.97,
-   "ytm_lordo": 4.1,
-   "ytm_netto": 3.6,
+   "prezzo": 94.88,
+   "ytm_lordo": 4.12,
+   "ytm_netto": 3.61,
    "lotto": 1000,
-   "volume_mln": 1.815,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 14.074,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005518128",
@@ -1068,12 +1068,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-05-01",
    "cedola": 4.4,
-   "prezzo": 101.99,
-   "ytm_lordo": 4.09,
-   "ytm_netto": 3.53,
+   "prezzo": 101.8,
+   "ytm_lordo": 4.12,
+   "ytm_netto": 3.57,
    "lotto": 1000,
-   "volume_mln": 4.158,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.725,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005704868",
@@ -1081,12 +1081,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-06-15",
    "cedola": 3.3,
-   "prezzo": 95.55,
-   "ytm_lordo": 4.12,
-   "ytm_netto": 3.61,
+   "prezzo": 95.41,
+   "ytm_lordo": 4.15,
+   "ytm_netto": 3.63,
    "lotto": 1000,
-   "volume_mln": 2.023,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.372,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005240350",
@@ -1094,12 +1094,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-09-01",
    "cedola": 2.45,
-   "prezzo": 90.66,
-   "ytm_lordo": 4.08,
-   "ytm_netto": 3.59,
+   "prezzo": 90.44,
+   "ytm_lordo": 4.12,
+   "ytm_netto": 3.62,
    "lotto": 1000,
-   "volume_mln": 3.284,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.326,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005722845",
@@ -1107,12 +1107,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-09-15",
    "cedola": 3.35,
-   "prezzo": 95.45,
-   "ytm_lordo": 4.16,
-   "ytm_netto": 3.65,
+   "prezzo": 95.26,
+   "ytm_lordo": 4.2,
+   "ytm_netto": 3.68,
    "lotto": 1000,
-   "volume_mln": 1.797,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 10.498,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005544082",
@@ -1120,12 +1120,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2033-11-01",
    "cedola": 4.35,
-   "prezzo": 101.41,
-   "ytm_lordo": 4.16,
-   "ytm_netto": 3.61,
+   "prezzo": 101.21,
+   "ytm_lordo": 4.19,
+   "ytm_netto": 3.64,
    "lotto": 1000,
-   "volume_mln": 12.036,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 18.421,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005560948",
@@ -1133,12 +1133,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2034-03-01",
    "cedola": 4.2,
-   "prezzo": 100.34,
-   "ytm_lordo": 4.19,
-   "ytm_netto": 3.65,
+   "prezzo": 100.07,
+   "ytm_lordo": 4.23,
+   "ytm_netto": 3.7,
    "lotto": 1000,
-   "volume_mln": 3.228,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.866,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005584856",
@@ -1146,12 +1146,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2034-07-01",
    "cedola": 3.85,
-   "prezzo": 97.9,
-   "ytm_lordo": 4.22,
-   "ytm_netto": 3.69,
+   "prezzo": 97.62,
+   "ytm_lordo": 4.26,
+   "ytm_netto": 3.73,
    "lotto": 1000,
-   "volume_mln": 2.083,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.218,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0003535157",
@@ -1159,12 +1159,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2034-08-01",
    "cedola": 5.0,
-   "prezzo": 105.39,
-   "ytm_lordo": 4.22,
-   "ytm_netto": 3.6,
+   "prezzo": 105.14,
+   "ytm_lordo": 4.26,
+   "ytm_netto": 3.64,
    "lotto": 1000,
-   "volume_mln": 0.752,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.397,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005607970",
@@ -1172,12 +1172,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2035-02-01",
    "cedola": 3.85,
-   "prezzo": 97.33,
-   "ytm_lordo": 4.28,
-   "ytm_netto": 3.75,
+   "prezzo": 97.0,
+   "ytm_lordo": 4.33,
+   "ytm_netto": 3.79,
    "lotto": 1000,
-   "volume_mln": 1.619,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.714,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005358806",
@@ -1185,12 +1185,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2035-03-01",
    "cedola": 3.35,
-   "prezzo": 94.04,
-   "ytm_lordo": 4.25,
-   "ytm_netto": 3.73,
+   "prezzo": 93.85,
+   "ytm_lordo": 4.28,
+   "ytm_netto": 3.76,
    "lotto": 1000,
-   "volume_mln": 3.125,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.423,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005508590",
@@ -1198,12 +1198,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2035-04-30",
    "cedola": 4.0,
-   "prezzo": 98.42,
-   "ytm_lordo": 4.27,
-   "ytm_netto": 3.73,
+   "prezzo": 98.11,
+   "ytm_lordo": 4.31,
+   "ytm_netto": 3.77,
    "lotto": 1000,
-   "volume_mln": 0.849,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.716,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005631590",
@@ -1211,12 +1211,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2035-08-01",
    "cedola": 3.65,
-   "prezzo": 95.38,
-   "ytm_lordo": 4.34,
-   "ytm_netto": 3.8,
+   "prezzo": 95.32,
+   "ytm_lordo": 4.35,
+   "ytm_netto": 3.81,
    "lotto": 1000,
-   "volume_mln": 2.324,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.131,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005648149",
@@ -1224,12 +1224,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2035-10-01",
    "cedola": 3.6,
-   "prezzo": 94.88,
-   "ytm_lordo": 4.35,
-   "ytm_netto": 3.81,
+   "prezzo": 94.67,
+   "ytm_lordo": 4.38,
+   "ytm_netto": 3.84,
    "lotto": 1000,
-   "volume_mln": 2.465,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.251,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005676504",
@@ -1237,12 +1237,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2036-02-01",
    "cedola": 3.45,
-   "prezzo": 93.46,
-   "ytm_lordo": 4.36,
-   "ytm_netto": 3.83,
+   "prezzo": 93.27,
+   "ytm_lordo": 4.39,
+   "ytm_netto": 3.85,
    "lotto": 1000,
-   "volume_mln": 3.299,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.594,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005402117",
@@ -1250,12 +1250,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2036-03-01",
    "cedola": 1.45,
-   "prezzo": 78.31,
-   "ytm_lordo": 4.36,
-   "ytm_netto": 3.86,
+   "prezzo": 78.04,
+   "ytm_lordo": 4.4,
+   "ytm_netto": 3.9,
    "lotto": 1000,
-   "volume_mln": 2.66,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.971,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005706285",
@@ -1263,12 +1263,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2036-07-01",
    "cedola": 3.8,
-   "prezzo": 95.63,
-   "ytm_lordo": 4.41,
-   "ytm_netto": 3.86,
+   "prezzo": 95.35,
+   "ytm_lordo": 4.45,
+   "ytm_netto": 3.9,
    "lotto": 1000,
-   "volume_mln": 8.203,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.756,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005177909",
@@ -1276,12 +1276,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2036-09-01",
    "cedola": 2.25,
-   "prezzo": 83.5,
-   "ytm_lordo": 4.38,
-   "ytm_netto": 3.87,
+   "prezzo": 83.29,
+   "ytm_lordo": 4.42,
+   "ytm_netto": 3.9,
    "lotto": 1000,
-   "volume_mln": 2.437,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.676,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005729931",
@@ -1289,12 +1289,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2036-10-01",
    "cedola": 4.0,
-   "prezzo": 96.94,
-   "ytm_lordo": 4.43,
-   "ytm_netto": 3.88,
+   "prezzo": 96.64,
+   "ytm_lordo": 4.47,
+   "ytm_netto": 3.91,
    "lotto": 1000,
-   "volume_mln": 4.685,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.715,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0003934657",
@@ -1302,12 +1302,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2037-02-01",
    "cedola": 4.0,
-   "prezzo": 97.22,
-   "ytm_lordo": 4.39,
-   "ytm_netto": 3.84,
+   "prezzo": 96.89,
+   "ytm_lordo": 4.43,
+   "ytm_netto": 3.88,
    "lotto": 1000,
-   "volume_mln": 14.606,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 10.461,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005433195",
@@ -1315,12 +1315,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2037-03-01",
    "cedola": 0.95,
-   "prezzo": 71.83,
-   "ytm_lordo": 4.43,
-   "ytm_netto": 3.94,
+   "prezzo": 71.56,
+   "ytm_lordo": 4.48,
+   "ytm_netto": 3.98,
    "lotto": 1000,
-   "volume_mln": 10.09,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.841,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005596470",
@@ -1328,12 +1328,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2037-10-30",
    "cedola": 4.05,
-   "prezzo": 96.7,
-   "ytm_lordo": 4.48,
-   "ytm_netto": 3.92,
+   "prezzo": 96.34,
+   "ytm_lordo": 4.53,
+   "ytm_netto": 3.96,
    "lotto": 1000,
-   "volume_mln": 5.282,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.886,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005496770",
@@ -1341,12 +1341,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2038-03-01",
    "cedola": 3.25,
-   "prezzo": 89.44,
-   "ytm_lordo": 4.5,
-   "ytm_netto": 3.96,
+   "prezzo": 89.07,
+   "ytm_lordo": 4.55,
+   "ytm_netto": 4.0,
    "lotto": 1000,
-   "volume_mln": 1.738,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.907,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005321325",
@@ -1354,12 +1354,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2038-09-01",
    "cedola": 2.95,
-   "prezzo": 86.22,
-   "ytm_lordo": 4.52,
-   "ytm_netto": 3.98,
+   "prezzo": 85.82,
+   "ytm_lordo": 4.57,
+   "ytm_netto": 4.02,
    "lotto": 1000,
-   "volume_mln": 1.759,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.138,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005733099",
@@ -1367,12 +1367,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2038-10-30",
    "cedola": 4.4,
-   "prezzo": 99.0,
-   "ytm_lordo": 4.56,
-   "ytm_netto": 3.99,
+   "prezzo": 98.62,
+   "ytm_lordo": 4.6,
+   "ytm_netto": 4.02,
    "lotto": 1000,
-   "volume_mln": 6.809,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 5.569,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0004286966",
@@ -1380,12 +1380,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2039-08-01",
    "cedola": 5.0,
-   "prezzo": 104.6,
-   "ytm_lordo": 4.57,
-   "ytm_netto": 3.95,
+   "prezzo": 104.25,
+   "ytm_lordo": 4.61,
+   "ytm_netto": 3.99,
    "lotto": 1000,
-   "volume_mln": 1.573,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.266,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005582421",
@@ -1393,12 +1393,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2039-10-01",
    "cedola": 4.15,
-   "prezzo": 96.11,
-   "ytm_lordo": 4.6,
-   "ytm_netto": 4.03,
+   "prezzo": 95.75,
+   "ytm_lordo": 4.64,
+   "ytm_netto": 4.07,
    "lotto": 1000,
-   "volume_mln": 5.825,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.17,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005377152",
@@ -1406,12 +1406,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2040-03-01",
    "cedola": 3.1,
-   "prezzo": 85.65,
-   "ytm_lordo": 4.6,
-   "ytm_netto": 4.05,
+   "prezzo": 85.31,
+   "ytm_lordo": 4.64,
+   "ytm_netto": 4.09,
    "lotto": 1000,
-   "volume_mln": 4.104,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.378,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0004532559",
@@ -1419,12 +1419,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2040-09-01",
    "cedola": 5.0,
-   "prezzo": 104.36,
-   "ytm_lordo": 4.62,
-   "ytm_netto": 4.0,
+   "prezzo": 103.95,
+   "ytm_lordo": 4.66,
+   "ytm_netto": 4.04,
    "lotto": 1000,
-   "volume_mln": 4.02,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.513,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005635583",
@@ -1432,12 +1432,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2040-10-01",
    "cedola": 3.85,
-   "prezzo": 92.2,
-   "ytm_lordo": 4.67,
-   "ytm_netto": 4.1,
+   "prezzo": 91.78,
+   "ytm_lordo": 4.72,
+   "ytm_netto": 4.14,
    "lotto": 1000,
-   "volume_mln": 2.416,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.502,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005421703",
@@ -1445,12 +1445,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2041-03-01",
    "cedola": 1.8,
-   "prezzo": 70.8,
-   "ytm_lordo": 4.67,
-   "ytm_netto": 4.15,
+   "prezzo": 70.52,
+   "ytm_lordo": 4.7,
+   "ytm_netto": 4.18,
    "lotto": 1000,
-   "volume_mln": 0.905,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.526,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005694630",
@@ -1458,12 +1458,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2041-10-01",
    "cedola": 3.95,
-   "prezzo": 92.34,
-   "ytm_lordo": 4.72,
-   "ytm_netto": 4.14,
+   "prezzo": 91.9,
+   "ytm_lordo": 4.77,
+   "ytm_netto": 4.18,
    "lotto": 1000,
-   "volume_mln": 1.405,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.41,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005530032",
@@ -1471,12 +1471,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2043-09-01",
    "cedola": 4.45,
-   "prezzo": 96.71,
-   "ytm_lordo": 4.79,
-   "ytm_netto": 4.19,
+   "prezzo": 96.42,
+   "ytm_lordo": 4.82,
+   "ytm_netto": 4.22,
    "lotto": 1000,
-   "volume_mln": 9.297,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.905,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0004923998",
@@ -1484,12 +1484,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2044-09-01",
    "cedola": 4.75,
-   "prezzo": 100.37,
-   "ytm_lordo": 4.77,
-   "ytm_netto": 4.17,
+   "prezzo": 99.85,
+   "ytm_lordo": 4.82,
+   "ytm_netto": 4.21,
    "lotto": 1000,
-   "volume_mln": 3.263,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.237,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005438004",
@@ -1497,12 +1497,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2045-04-30",
    "cedola": 1.5,
-   "prezzo": 60.4,
-   "ytm_lordo": 4.8,
-   "ytm_netto": 4.3,
+   "prezzo": 60.1,
+   "ytm_lordo": 4.84,
+   "ytm_netto": 4.33,
    "lotto": 1000,
-   "volume_mln": 3.862,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.586,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005631608",
@@ -1510,12 +1510,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2046-04-30",
    "cedola": 4.1,
-   "prezzo": 91.36,
-   "ytm_lordo": 4.85,
-   "ytm_netto": 4.25,
+   "prezzo": 90.84,
+   "ytm_lordo": 4.89,
+   "ytm_netto": 4.29,
    "lotto": 1000,
-   "volume_mln": 5.392,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.948,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005083057",
@@ -1523,12 +1523,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2046-09-01",
    "cedola": 3.25,
-   "prezzo": 80.45,
-   "ytm_lordo": 4.85,
-   "ytm_netto": 4.28,
+   "prezzo": 80.05,
+   "ytm_lordo": 4.88,
+   "ytm_netto": 4.31,
    "lotto": 1000,
-   "volume_mln": 1.844,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.884,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005162828",
@@ -1536,12 +1536,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2047-03-01",
    "cedola": 2.7,
-   "prezzo": 72.91,
-   "ytm_lordo": 4.86,
-   "ytm_netto": 4.31,
+   "prezzo": 72.67,
+   "ytm_lordo": 4.89,
+   "ytm_netto": 4.33,
    "lotto": 1000,
-   "volume_mln": 4.124,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.772,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005273013",
@@ -1549,12 +1549,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2048-03-01",
    "cedola": 3.45,
-   "prezzo": 82.03,
-   "ytm_lordo": 4.87,
-   "ytm_netto": 4.29,
+   "prezzo": 81.56,
+   "ytm_lordo": 4.91,
+   "ytm_netto": 4.33,
    "lotto": 1000,
-   "volume_mln": 4.894,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.581,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005363111",
@@ -1562,12 +1562,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2049-09-01",
    "cedola": 3.85,
-   "prezzo": 86.65,
-   "ytm_lordo": 4.88,
-   "ytm_netto": 4.29,
+   "prezzo": 86.19,
+   "ytm_lordo": 4.92,
+   "ytm_netto": 4.32,
    "lotto": 1000,
-   "volume_mln": 3.722,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 6.229,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005398406",
@@ -1575,12 +1575,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2050-09-01",
    "cedola": 2.45,
-   "prezzo": 66.4,
-   "ytm_lordo": 4.9,
-   "ytm_netto": 4.36,
+   "prezzo": 66.12,
+   "ytm_lordo": 4.93,
+   "ytm_netto": 4.39,
    "lotto": 1000,
-   "volume_mln": 6.464,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.135,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005425233",
@@ -1588,12 +1588,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2051-09-01",
    "cedola": 1.7,
-   "prezzo": 55.0,
-   "ytm_lordo": 4.89,
-   "ytm_netto": 4.39,
+   "prezzo": 54.68,
+   "ytm_lordo": 4.93,
+   "ytm_netto": 4.42,
    "lotto": 1000,
-   "volume_mln": 16.392,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 18.25,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005480980",
@@ -1601,12 +1601,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2052-09-01",
    "cedola": 2.15,
-   "prezzo": 60.41,
-   "ytm_lordo": 4.92,
-   "ytm_netto": 4.39,
+   "prezzo": 60.07,
+   "ytm_lordo": 4.95,
+   "ytm_netto": 4.42,
    "lotto": 1000,
-   "volume_mln": 4.275,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.32,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005534141",
@@ -1614,12 +1614,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2053-10-01",
    "cedola": 4.5,
-   "prezzo": 93.8,
-   "ytm_lordo": 4.98,
-   "ytm_netto": 4.36,
+   "prezzo": 93.35,
+   "ytm_lordo": 5.01,
+   "ytm_netto": 4.39,
    "lotto": 1000,
-   "volume_mln": 21.109,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 7.142,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005611741",
@@ -1627,12 +1627,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2054-10-01",
    "cedola": 4.3,
-   "prezzo": 90.54,
-   "ytm_lordo": 4.99,
-   "ytm_netto": 4.37,
+   "prezzo": 90.1,
+   "ytm_lordo": 5.02,
+   "ytm_netto": 4.4,
    "lotto": 1000,
-   "volume_mln": 35.271,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 29.961,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005668238",
@@ -1640,12 +1640,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2055-10-01",
    "cedola": 4.65,
-   "prezzo": 95.24,
-   "ytm_lordo": 5.02,
-   "ytm_netto": 4.4,
+   "prezzo": 94.78,
+   "ytm_lordo": 5.06,
+   "ytm_netto": 4.43,
    "lotto": 1000,
-   "volume_mln": 10.84,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 9.311,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005217390",
@@ -1653,12 +1653,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2067-03-01",
    "cedola": 2.8,
-   "prezzo": 65.54,
-   "ytm_lordo": 4.78,
-   "ytm_netto": 4.23,
+   "prezzo": 65.05,
+   "ytm_lordo": 4.81,
+   "ytm_netto": 4.27,
    "lotto": 1000,
-   "volume_mln": 5.477,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 15.89,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005441883",
@@ -1666,12 +1666,12 @@ window.TASSI = {
    "tipo": "BTP",
    "scadenza": "2072-03-01",
    "cedola": 2.15,
-   "prezzo": 54.55,
-   "ytm_lordo": 4.57,
-   "ytm_netto": 4.07,
+   "prezzo": 54.04,
+   "ytm_lordo": 4.61,
+   "ytm_netto": 4.11,
    "lotto": 1000,
-   "volume_mln": 33.956,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 69.599,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005388175",
@@ -1679,12 +1679,12 @@ window.TASSI = {
    "tipo": "BTPItalia",
    "scadenza": "2027-10-28",
    "cedola": 0.65,
-   "prezzo": 100.84,
-   "ytm_lordo": -0.24,
-   "ytm_netto": -0.32,
+   "prezzo": 100.74,
+   "ytm_lordo": -0.14,
+   "ytm_netto": -0.22,
    "lotto": 1000,
-   "volume_mln": 0.525,
-   "data_prezzo": "18/11/2026Guide\r\n\t\t(EndOfDay) al termine di ogni giornata di borsa aperta(indicativamente verso le 19).\r\n\t\t(Intraday) la raccolta dati si dovrebbe concludere indicativamente verso le 12.20\r\n\t\t\tconsiderando la data di regolamento dell'operazione pari a T+2 lavorativi escludendo solamente il sabato e la domenica.\r\n\t\t\tal lordo delle commissioni di compravendita.\r\n\t\t\t(Intraday)utilizzando il prezzo lettera/ask presente nel book. Considerate che il prezzo non è in tempo reale ma è ritardato a seconda del mercato da 15 a 20 minuti.\r\n\t\t\t(EndOfDay)utilizzando l'ultimo prezzo dello scambio se il titolo ha scambiato in giornata oppure il prezzo di riferimento del giorno precedente.\r\n\t\t\tutilizzando diversi tipi di calcolo:\r\n\t\t\t\r\n\t\t\t\tTasso Fisso: nel calcolo vengono utilizzati i flussi di cassa futuri che per definizione sono certi.\r\n\t\t\t\tRendimento minimo: nel calcolo viene utilizzata sempre la cedola minima prevista andando a non considerare eventuali bonus legati a condizioni particolari.\r\n\t\t\t\tRendimento calcolato: nel calcolo viene utilizzato il valore corrente dell'indice sottostante; in questo caso i dati sono significativi solo per confrontare titoli con caratteristiche simili.\r\n\t\t\t\tFirst Call: in caso di titolo callable il rendimento viene calcolato ipotizzando un richiamo del titolo alla prima scadenza utile.\r\n\t\t\t\r\n\t\t\r\n\t\tIl valore Z-spread è calcolato utilizzando come curva dei tassi i valori dell'IRS aggiornati al giorno precedente(due giorni precedenti per i dati Intraday) ed interpolati linearmente.\r\n\t\tStorico)-->\r\n\r\n\t\tI dati contenuti nella tabella sono i seguenti:\r\n\t\t\r\n\t\t\tCodice ISIN: codice ISIN del titolo\r\n\t\t\tDescrizione: descrizione del titolo\r\n\t\t\tDivisa: divisa di quotazione del titolo\r\n\t\t\tData scadenza: data scadenza del titolo\r\n\t\t\tLotto minimo: lotto minimo di negoziazione\r\n\t\t\tStatus: status del titolo(Senior, Junior, T2,...)\r\n\t\t\tMercato: mercato di quotazione del titolo dove è stato reperito il prezzo di riferimento\r\n\t\t\t(EndOfDay)Prezzo: può essere il last price se il titolo ha scambiato nella giornata o il prezzo di riferimento del giorno precedente se il titolo non ha scambiato. \r\n\t\t\t(Intraday)Prezzo Ask: è il primo prezzo ask rilevato nel book. \r\n\t\t\tVolume: volume giornaliero o volume a data/ora rilevamento\r\n\t\t\tVR: valore pomposamente chiamato Volume rating. Il valore è così calcolato: viene calcolata la media dei volumi giornalieri negli ultimi 20 giorni, il valore viene convertito in Euro utilizzando l'ultimo cambio disponibile e viene quindi assegnato un valore da 0 a 4 considerando i seguenti range:\r\n\t\t\t\t\r\n\t\t\t\t\t0: nessuno scambio nel periodo considerato\r\n\t\t\t\t\t1: volume medio compreso tra 0 e 100.000\r\n\t\t\t\t\t2: volume medio compreso tra 100.000 e 1.000.000\r\n\t\t\t\t\t3: volume medio compreso tra 1.000.000 e 2.500.000\r\n\t\t\t\t\t4: volume medio superiore a 2.500.000 \r\n\t\t\t\t\r\n\t\t\tYield(Lordo): rendimento lordo calcolato utilizzando la metodologia del tasso interno di rendimento\r\n\t\t\tYield(Netto): rendimento netto calcolato utilizzando la metodologia del tasso interno di rendimento(il calcolo NON considera il bollo sul deposito titoli pagato trimestralmente/annualmente) \r\n\t\t\tYield(senza CG): rendimento netto senza considerare l'eventuale addebito del capital gain calcolato utilizzando la metodologia del tasso interno di rendimento(il calcolo NON considera il bollo sul deposito titoli pagato trimestralmente/annualmente) \r\n\t\t\tDuration: Duration\r\n\t\t\tZ-spread: la Z-spread solo per i titoli quotati in Euro calcolato considerando i valori IRS aggiornati al giorno precedente\r\n\t\t\tCalculator: facendo click o tap sull'icona si apre la pagina del calcolatore\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\tI dati possono essere filtrati utilizzando i seguenti filtri disponibili nella sezione Filters:\r\n\t\t\r\n\t\t\r\n\t\tTipo dato\r\n\t\tEndOfDay - estrae i dati calcolati a fine giornataIntraday - estrae i dati calcolati durante la giornata\r\n\t\tEmittente\r\n\t\tDivisa\r\n\t\tLotto minimo\r\n\t\tStatus\r\n\t\tPrezzo\r\n\t\t\r\n\t\tnessuna selezione -  Nessun filtro\r\n\t\t\r\n\t\tminore di 100 - estrae solo i titoli con prezzo minore di 100\r\n\t\t\r\n\t\tmaggiore di 100 - estrae solo i titoli con prezzo maggiore di 100\r\n\t\t\r\n\t\tdiverso da 0 - non estrae i titoli che hanno prezzo uguale a 0. Tipicamente si riscontra questa casistica nei dati Intraday quando nel book non c'è alcuna proposta di vendita\r\n\t\t\r\n\t\t\r\n\t\tVolume rating\r\n\t\t\r\n\t\tYield lordo - Minimo\r\n\t\tYield netto - Minimo\r\n\t\tData scadenza\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\tCosa può generare rendimenti non corretti/non significativi:\r\n\t\t\r\n\t\t\r\n\t\tprezzo non aggiornato in caso di titoli poco liquidi\r\n\t\tdata di regolamento non corretta(le festività come il Natale piuttosto che il ferragosto non vengono considerate)\r\n\t\ti prezzi vengono acquisiti in automatico senza presidio; eventuali malfunzionamenti dell'applicazione non sono presidiati\r\n\t\terrata parametrizzazione del titolo\r\n\t\t\r\n\t\ta fronte di tutto ciò vi consiglio prima di operare di verificare l'effettivo rendimento utilizzando gli altri strumenti messi a disposizione della rete\r\n\t\tPer segnalare anomalie, malfunzionamenti, dati non aggiornati e richieste di censimento nuovi titoli vi invito a scrivere  qui"
+   "volume_mln": 0.875,
+   "data_prezzo": "19/11/2026Guide\r\n\t\t(EndOfDay) al termine di ogni giornata di borsa aperta(indicativamente verso le 19).\r\n\t\t(Intraday) la raccolta dati si dovrebbe concludere indicativamente verso le 12.20\r\n\t\t\tconsiderando la data di regolamento dell'operazione pari a T+2 lavorativi escludendo solamente il sabato e la domenica.\r\n\t\t\tal lordo delle commissioni di compravendita.\r\n\t\t\t(Intraday)utilizzando il prezzo lettera/ask presente nel book. Considerate che il prezzo non è in tempo reale ma è ritardato a seconda del mercato da 15 a 20 minuti.\r\n\t\t\t(EndOfDay)utilizzando l'ultimo prezzo dello scambio se il titolo ha scambiato in giornata oppure il prezzo di riferimento del giorno precedente.\r\n\t\t\tutilizzando diversi tipi di calcolo:\r\n\t\t\t\r\n\t\t\t\tTasso Fisso: nel calcolo vengono utilizzati i flussi di cassa futuri che per definizione sono certi.\r\n\t\t\t\tRendimento minimo: nel calcolo viene utilizzata sempre la cedola minima prevista andando a non considerare eventuali bonus legati a condizioni particolari.\r\n\t\t\t\tRendimento calcolato: nel calcolo viene utilizzato il valore corrente dell'indice sottostante; in questo caso i dati sono significativi solo per confrontare titoli con caratteristiche simili.\r\n\t\t\t\tFirst Call: in caso di titolo callable il rendimento viene calcolato ipotizzando un richiamo del titolo alla prima scadenza utile.\r\n\t\t\t\r\n\t\t\r\n\t\tIl valore Z-spread è calcolato utilizzando come curva dei tassi i valori dell'IRS aggiornati al giorno precedente(due giorni precedenti per i dati Intraday) ed interpolati linearmente.\r\n\t\tStorico)-->\r\n\r\n\t\tI dati contenuti nella tabella sono i seguenti:\r\n\t\t\r\n\t\t\tCodice ISIN: codice ISIN del titolo\r\n\t\t\tDescrizione: descrizione del titolo\r\n\t\t\tDivisa: divisa di quotazione del titolo\r\n\t\t\tData scadenza: data scadenza del titolo\r\n\t\t\tLotto minimo: lotto minimo di negoziazione\r\n\t\t\tStatus: status del titolo(Senior, Junior, T2,...)\r\n\t\t\tMercato: mercato di quotazione del titolo dove è stato reperito il prezzo di riferimento\r\n\t\t\t(EndOfDay)Prezzo: può essere il last price se il titolo ha scambiato nella giornata o il prezzo di riferimento del giorno precedente se il titolo non ha scambiato. \r\n\t\t\t(Intraday)Prezzo Ask: è il primo prezzo ask rilevato nel book. \r\n\t\t\tVolume: volume giornaliero o volume a data/ora rilevamento\r\n\t\t\tVR: valore pomposamente chiamato Volume rating. Il valore è così calcolato: viene calcolata la media dei volumi giornalieri negli ultimi 20 giorni, il valore viene convertito in Euro utilizzando l'ultimo cambio disponibile e viene quindi assegnato un valore da 0 a 4 considerando i seguenti range:\r\n\t\t\t\t\r\n\t\t\t\t\t0: nessuno scambio nel periodo considerato\r\n\t\t\t\t\t1: volume medio compreso tra 0 e 100.000\r\n\t\t\t\t\t2: volume medio compreso tra 100.000 e 1.000.000\r\n\t\t\t\t\t3: volume medio compreso tra 1.000.000 e 2.500.000\r\n\t\t\t\t\t4: volume medio superiore a 2.500.000 \r\n\t\t\t\t\r\n\t\t\tYield(Lordo): rendimento lordo calcolato utilizzando la metodologia del tasso interno di rendimento\r\n\t\t\tYield(Netto): rendimento netto calcolato utilizzando la metodologia del tasso interno di rendimento(il calcolo NON considera il bollo sul deposito titoli pagato trimestralmente/annualmente) \r\n\t\t\tYield(senza CG): rendimento netto senza considerare l'eventuale addebito del capital gain calcolato utilizzando la metodologia del tasso interno di rendimento(il calcolo NON considera il bollo sul deposito titoli pagato trimestralmente/annualmente) \r\n\t\t\tDuration: Duration\r\n\t\t\tZ-spread: la Z-spread solo per i titoli quotati in Euro calcolato considerando i valori IRS aggiornati al giorno precedente\r\n\t\t\tCalculator: facendo click o tap sull'icona si apre la pagina del calcolatore\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\tI dati possono essere filtrati utilizzando i seguenti filtri disponibili nella sezione Filters:\r\n\t\t\r\n\t\t\r\n\t\tTipo dato\r\n\t\tEndOfDay - estrae i dati calcolati a fine giornataIntraday - estrae i dati calcolati durante la giornata\r\n\t\tEmittente\r\n\t\tDivisa\r\n\t\tLotto minimo\r\n\t\tStatus\r\n\t\tPrezzo\r\n\t\t\r\n\t\tnessuna selezione -  Nessun filtro\r\n\t\t\r\n\t\tminore di 100 - estrae solo i titoli con prezzo minore di 100\r\n\t\t\r\n\t\tmaggiore di 100 - estrae solo i titoli con prezzo maggiore di 100\r\n\t\t\r\n\t\tdiverso da 0 - non estrae i titoli che hanno prezzo uguale a 0. Tipicamente si riscontra questa casistica nei dati Intraday quando nel book non c'è alcuna proposta di vendita\r\n\t\t\r\n\t\t\r\n\t\tVolume rating\r\n\t\t\r\n\t\tYield lordo - Minimo\r\n\t\tYield netto - Minimo\r\n\t\tData scadenza\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\tCosa può generare rendimenti non corretti/non significativi:\r\n\t\t\r\n\t\t\r\n\t\tprezzo non aggiornato in caso di titoli poco liquidi\r\n\t\tdata di regolamento non corretta(le festività come il Natale piuttosto che il ferragosto non vengono considerate)\r\n\t\ti prezzi vengono acquisiti in automatico senza presidio; eventuali malfunzionamenti dell'applicazione non sono presidiati\r\n\t\terrata parametrizzazione del titolo\r\n\t\t\r\n\t\ta fronte di tutto ciò vi consiglio prima di operare di verificare l'effettivo rendimento utilizzando gli altri strumenti messi a disposizione della rete\r\n\t\tPer segnalare anomalie, malfunzionamenti, dati non aggiornati e richieste di censimento nuovi titoli vi invito a scrivere  qui"
   },
   {
    "isin": "IT0005532723",
@@ -1692,12 +1692,12 @@ window.TASSI = {
    "tipo": "BTPItalia",
    "scadenza": "2028-03-14",
    "cedola": 2.0,
-   "prezzo": 101.71,
-   "ytm_lordo": 0.69,
-   "ytm_netto": 0.44,
+   "prezzo": 101.62,
+   "ytm_lordo": 0.75,
+   "ytm_netto": 0.51,
    "lotto": 1000,
-   "volume_mln": 9.256,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.314,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005517195",
@@ -1705,12 +1705,12 @@ window.TASSI = {
    "tipo": "BTPItalia",
    "scadenza": "2028-11-22",
    "cedola": 1.6,
-   "prezzo": 101.45,
-   "ytm_lordo": 0.87,
-   "ytm_netto": 0.67,
+   "prezzo": 101.35,
+   "ytm_lordo": 0.92,
+   "ytm_netto": 0.72,
    "lotto": 1000,
-   "volume_mln": 2.393,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 1.784,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005497000",
@@ -1718,12 +1718,12 @@ window.TASSI = {
    "tipo": "BTPItalia",
    "scadenza": "2030-06-28",
    "cedola": 1.6,
-   "prezzo": 101.62,
-   "ytm_lordo": 1.14,
-   "ytm_netto": 0.94,
+   "prezzo": 101.23,
+   "ytm_lordo": 1.25,
+   "ytm_netto": 1.05,
    "lotto": 1000,
-   "volume_mln": 2.735,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.481,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005713547",
@@ -1731,12 +1731,12 @@ window.TASSI = {
    "tipo": "BTPItalia",
    "scadenza": "2031-06-23",
    "cedola": 1.6,
-   "prezzo": 100.83,
-   "ytm_lordo": 1.42,
-   "ytm_netto": 1.22,
+   "prezzo": 100.4,
+   "ytm_lordo": 1.52,
+   "ytm_netto": 1.31,
    "lotto": 1000,
-   "volume_mln": 8.876,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 3.497,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005648255",
@@ -1744,12 +1744,12 @@ window.TASSI = {
    "tipo": "BTPItalia",
    "scadenza": "2032-06-04",
    "cedola": 1.85,
-   "prezzo": 103.1,
-   "ytm_lordo": 1.27,
-   "ytm_netto": 1.04,
+   "prezzo": 102.4,
+   "ytm_lordo": 1.4,
+   "ytm_netto": 1.17,
    "lotto": 1000,
-   "volume_mln": 8.439,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 2.469,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005246134",
@@ -1757,12 +1757,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2028-05-15",
    "cedola": 1.3,
-   "prezzo": 100.04,
-   "ytm_lordo": 1.28,
-   "ytm_netto": 1.11,
+   "prezzo": 100.1,
+   "ytm_lordo": 1.24,
+   "ytm_netto": 1.07,
    "lotto": 1000,
-   "volume_mln": 0.338,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.249,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005543803",
@@ -1770,12 +1770,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2029-05-15",
    "cedola": 1.5,
-   "prezzo": 99.99,
-   "ytm_lordo": 1.51,
-   "ytm_netto": 1.3,
+   "prezzo": 99.8,
+   "ytm_lordo": 1.59,
+   "ytm_netto": 1.38,
    "lotto": 1000,
-   "volume_mln": 0.554,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.345,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005387052",
@@ -1783,12 +1783,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2030-05-15",
    "cedola": 0.4,
-   "prezzo": 95.9,
-   "ytm_lordo": 1.62,
-   "ytm_netto": 1.42,
+   "prezzo": 95.82,
+   "ytm_lordo": 1.65,
+   "ytm_netto": 1.45,
    "lotto": 1000,
-   "volume_mln": 1.487,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.369,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005657348",
@@ -1796,12 +1796,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2031-08-15",
    "cedola": 1.1,
-   "prezzo": 97.02,
+   "prezzo": 97.0,
    "ytm_lordo": 1.77,
    "ytm_netto": 1.55,
    "lotto": 1000,
-   "volume_mln": 0.809,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.632,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005138828",
@@ -1809,12 +1809,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2032-09-15",
    "cedola": 1.25,
-   "prezzo": 97.05,
-   "ytm_lordo": 1.79,
-   "ytm_netto": 1.57,
+   "prezzo": 97.0,
+   "ytm_lordo": 1.8,
+   "ytm_netto": 1.58,
    "lotto": 1000,
-   "volume_mln": 0.596,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 10.964,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005482994",
@@ -1822,12 +1822,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2033-05-15",
    "cedola": 0.1,
-   "prezzo": 88.35,
-   "ytm_lordo": 2.04,
-   "ytm_netto": 1.79,
+   "prezzo": 88.24,
+   "ytm_lordo": 2.06,
+   "ytm_netto": 1.81,
    "lotto": 1000,
-   "volume_mln": 0.583,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.124,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0003745541",
@@ -1835,12 +1835,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2035-09-15",
    "cedola": 2.35,
-   "prezzo": 101.82,
-   "ytm_lordo": 2.13,
-   "ytm_netto": 1.84,
+   "prezzo": 101.65,
+   "ytm_lordo": 2.15,
+   "ytm_netto": 1.86,
    "lotto": 1000,
-   "volume_mln": 4.156,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.416,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005588881",
@@ -1848,12 +1848,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2036-05-15",
    "cedola": 1.8,
-   "prezzo": 95.11,
+   "prezzo": 95.13,
    "ytm_lordo": 2.39,
    "ytm_netto": 2.1,
    "lotto": 1000,
-   "volume_mln": 0.34,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.017,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005725160",
@@ -1861,12 +1861,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2037-02-15",
    "cedola": 2.0,
-   "prezzo": 95.6,
-   "ytm_lordo": 2.5,
-   "ytm_netto": 2.2,
+   "prezzo": 95.4,
+   "ytm_lordo": 2.53,
+   "ytm_netto": 2.22,
    "lotto": 1000,
-   "volume_mln": 0.622,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 4.988,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005547812",
@@ -1874,12 +1874,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2039-05-15",
    "cedola": 2.4,
-   "prezzo": 97.65,
-   "ytm_lordo": 2.64,
-   "ytm_netto": 2.31,
+   "prezzo": 97.4,
+   "ytm_lordo": 2.66,
+   "ytm_netto": 2.33,
    "lotto": 1000,
-   "volume_mln": 0.378,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.468,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0004545890",
@@ -1887,12 +1887,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2041-09-15",
    "cedola": 2.55,
-   "prezzo": 100.68,
-   "ytm_lordo": 2.51,
-   "ytm_netto": 2.19,
+   "prezzo": 100.14,
+   "ytm_lordo": 2.55,
+   "ytm_netto": 2.23,
    "lotto": 1000,
-   "volume_mln": 0.257,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.223,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005706293",
@@ -1900,12 +1900,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2046-02-15",
    "cedola": 2.25,
-   "prezzo": 91.55,
-   "ytm_lordo": 2.84,
-   "ytm_netto": 2.5,
+   "prezzo": 90.92,
+   "ytm_lordo": 2.89,
+   "ytm_netto": 2.54,
    "lotto": 1000,
-   "volume_mln": 0.039,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.492,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005436701",
@@ -1913,12 +1913,12 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2051-05-15",
    "cedola": 0.15,
-   "prezzo": 54.62,
-   "ytm_lordo": 2.71,
-   "ytm_netto": 2.45,
+   "prezzo": 54.3,
+   "ytm_lordo": 2.74,
+   "ytm_netto": 2.47,
    "lotto": 1000,
-   "volume_mln": 2.656,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.178,
+   "data_prezzo": "2026-11-19"
   },
   {
    "isin": "IT0005647273",
@@ -1926,30 +1926,30 @@ window.TASSI = {
    "tipo": "BTPi",
    "scadenza": "2056-05-15",
    "cedola": 2.55,
-   "prezzo": 92.7,
-   "ytm_lordo": 2.94,
-   "ytm_netto": 2.58,
+   "prezzo": 91.99,
+   "ytm_lordo": 2.98,
+   "ytm_netto": 2.62,
    "lotto": 3000,
-   "volume_mln": 1.064,
-   "data_prezzo": "2026-11-18"
+   "volume_mln": 0.297,
+   "data_prezzo": "2026-11-19"
   }
  ],
  "fonti": {
   "titoli": {
    "fonte": "simpletoolsforinvestors.eu (prezzi MOT di fine giornata)",
-   "aggiornato": "2026-11-19"
+   "aggiornato": "2026-11-20"
   },
   "inflazione": {
    "fonte": "Eurostat prc_hicp_minr",
-   "aggiornato": "2026-11-19"
+   "aggiornato": "2026-11-20"
   },
   "bce_deposito": {
    "fonte": "BCE - tasso sui depositi",
-   "aggiornato": "2026-11-19"
+   "aggiornato": "2026-11-20"
   },
   "gov_euro_7a": {
    "fonte": "BCE - curva titoli di Stato area euro, 7 anni",
-   "aggiornato": "2026-11-17"
+   "aggiornato": "2026-11-18"
   }
  },
  "inflazione": {
@@ -1959,7 +1959,7 @@ window.TASSI = {
   "indice": "IPCA (HICP) Italia"
  },
  "bce_deposito": 2.5,
- "gov_euro_7a": 3.755,
- "aggiornato": "2026-11-19",
+ "gov_euro_7a": 3.747,
+ "aggiornato": "2026-11-20",
  "avvisi": []
 };
